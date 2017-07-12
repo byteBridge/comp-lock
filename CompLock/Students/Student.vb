@@ -166,67 +166,44 @@ Public Class Student
     ''' Validates the credentials and checks for other validations eg, time, blacklisted,etc
     ''' </summary>
     Public Function Login(ByVal Username As String, ByVal Password As String) As Boolean
+        If (Me.FullName <> String.Empty And Username = Me.Username And Password = Me.Password) Then
+            If Type.ToLower <> "administrator" Then
+                'Has the user been blocked
+                If Student.IsMemberBlocked(Username) = True Then
+                    ' Connections.Connection.Close()
+                    Throw New Exception("We regret to inform you that your account qualifies to be blocked. Report by librarian's desk to have your account unblocked.")
+                    Return False
 
-
-        Dim Connections As DataConnections
-
-        Dim count As Integer
-
-        Try
-            Connections = New DataConnections()
-            Connections.Connection.Open()
-            Connections.SQLStatement = "SELECT  username,password, type FROM users where username ='" & Username & "' and password ='" & Password & "';"
-
-            count = 0
-            Connections.DataReader = Connections.Command.ExecuteReader()
-            If Connections.DataReader.Read() Then
-                count += 1
-                Type = Connections.DataReader.GetString(2)
-            End If
-            Connections.Connection.Close()
-            If count = 0 Then
-                Return False
-            ElseIf (count > 0) Then
-
-                If Type.ToLower <> "administrator" Then
-                    'Has the user been blocked
-                    If Student.IsMemberBlocked(Username) = True Then
-                        Connections.Connection.Close()
-                        Throw New Exception("We regret to inform you that your account qualifies to be blocked. Report by librarian's desk to have your account unblocked.")
+                Else
+                    'has the user used up his/her time?
+                    If CDate(TimeOperations.GetTotalUpTime(Username)) >= CDate(TimeOperations.GetTimeLimits(Type)) Then
+                        ' Connections.Connection.Close()
+                        Throw New Exception("We regret to inform you that you have used up today's time. May you come back tommorrow for more research.")
                         Return False
 
                     Else
-                        'has the user used up his/her time?
-                      If CDate(TimeOperations.GetTotalUpTime(Username)) >= CDate(TimeOperations.GetTimeLimits(Type)) Then
-                            Connections.Connection.Close()
-                            Throw New Exception("We regret to inform you that you have used up today's time. May you come back tommorrow for more research.")
+                        'is the user already online on another computer?
+                        If IsOnline(Username) = True Then
+                            Throw New Exception("It looks like your account is already logged in on another computer. Log out on that computer if you wish to use this one.")
                             Return False
-
                         Else
-                            'is the user already online on another computer?
-                            If IsOnline(Username) = True Then
-                                Throw New Exception("It looks like your account is already logged in on another computer. Log out on that computer if you wish to use this one.")
-                                Return False
-                            End If
+                            Return True
                         End If
                     End If
-
-                    'if the student passes all  the conditions allow him to log in
-                    Connections.Connection.Close()
-                    Return True
-                Else
-                    'the account belongs to a administrator wha has successfully logged in
-                    Return True
                 End If
-            End If
 
-        Catch ex As Exception
-            Throw ex 'throws even the exceptions generated within this block
-        End Try
+            ElseIf Type.ToLower = "administrator" Then
+                ' Admin with a correct password
+                Return True
+            End If
+        Else
+            Return False
+        End If
+
         Return False
     End Function
 
- 
+
     ''' <summary>
     ''' Formats the username into the accepted format, and checks if the username is valid
     ''' </summary>
