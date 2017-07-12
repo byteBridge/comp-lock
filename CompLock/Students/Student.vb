@@ -169,7 +169,7 @@ Public Class Student
         If (Me.FullName <> String.Empty And Username = Me.Username And Password = Me.Password) Then
             If Type.ToLower <> "administrator" Then
                 'Has the user been blocked
-                If Student.IsMemberBlocked(Username) = True Then
+                If IsMemberBlocked(Username) = True Then
                     ' Connections.Connection.Close()
                     Throw New Exception("We regret to inform you that your account qualifies to be blocked. Report by librarian's desk to have your account unblocked.")
                     Return False
@@ -503,25 +503,8 @@ Public Class Student
     ''' <param name="Username"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function IsMemberBlocked(ByVal Username As String) As Boolean
-        Dim Connections As DataConnections
-        Try
-            Connections = New DataConnections()
-            Connections.Connection.Open()
-            Connections.SQLStatement = (("SELECT blocked FROM users where username ='" & Username) & "'")
-            Connections.DataReader = Connections.Command.ExecuteReader()
-            While Connections.DataReader.Read()
-                If Connections.DataReader.GetBoolean(0) = True Then
-                    Return True
-                End If
-            End While
-            Connections.Connection.Close()
-            Return False
-
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-        End Try
-        Return False
+    Public Function IsMemberBlocked(ByVal Username As String) As Boolean
+        Return Me.Blocked
     End Function
 
 
