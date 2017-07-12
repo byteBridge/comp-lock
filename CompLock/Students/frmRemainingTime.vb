@@ -25,7 +25,7 @@ Public Class frmRemainingTime
 
         Me.Student = student
         'greet the student
-        lblHelloStudentName.Text = student.GetFullName(student.Username)
+        lblHelloStudentName.Text = student.FullName()
 
         'Get the values of the Total time used by the student and the time limit from the database
         TotalTimeUsed = TimeOperations.GetTotalUpTime(student.Username)

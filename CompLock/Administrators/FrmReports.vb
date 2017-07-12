@@ -17,7 +17,7 @@ Public Class FrmReports
         Dim _student As New Student()
         _student.Initialize(Username)
         Student = _student
-        lblReportTitle.Text = "- " & Student.GetFullName(Student.Username)
+        lblReportTitle.Text = "- " & Student.FullName()
         dgvReport.DataSource = _student.GetMemberHistory(Student.Username)
     End Sub
 

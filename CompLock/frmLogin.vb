@@ -27,7 +27,7 @@ Public Class frmLogin
                             Me.Close()
                         ElseIf Student.Type.ToLower = "administrator"
                             Dim AdminForm As New frmAdminMainMenu
-                            AdminForm.NameOfAdministrator = Student.GetFullName(txtUsername.Text)
+                            AdminForm.NameOfAdministrator = Student.FullName()
                             AdminForm.Show()
                             AllowWindowToClose = True
                             Me.Close()

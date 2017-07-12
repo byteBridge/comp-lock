@@ -79,6 +79,17 @@ Public Class Student
     End Property
 
     ''' <summary>
+    ''' The student's full name, a concartnation of the first and last names
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public ReadOnly Property FullName As String
+        Get
+            Return Me.FirstName + " " + Me._surname
+        End Get
+    End Property
+    ''' <summary>
     ''' The type sets the different priviledges each member is allowed to enjoy
     ''' </summary>
     ''' <value></value>
@@ -536,35 +547,6 @@ Public Class Student
         Return False
     End Function
 
-
-    ''' <summary>
-    ''' Get the concartnated full name of the user e.g John Deere
-    ''' </summary>
-    ''' <param name="Username"></param>
-    ''' <returns></returns>
-    ''' <remarks></remarks>
-    Public Function GetFullName(ByVal Username As String) As String
-        Dim Connections As DataConnections
-        Dim FullName As String
-        Try
-            Connections = New DataConnections()
-            Connections.Connection.Open()
-            Connections.SQLStatement = "SELECT f_name , s_name FROM users where username ='" & Username & "';"
-            Connections.DataReader = Connections.Command.ExecuteReader()
-            While Connections.DataReader.Read()
-                FirstName = Connections.DataReader.GetString(0).ToString
-                Surname = Connections.DataReader.GetString(1).ToString()
-                FullName = FirstName & " " & Surname
-                Return FullName
-            End While
-            Connections.Connection.Close()
-
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-        End Try
-
-        Return "#GetFullNameError#"
-    End Function
 
     ''' <summary>
     '''  Refreshes the student object with the latest data from the database
