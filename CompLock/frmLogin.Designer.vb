@@ -32,7 +32,6 @@ Partial Class frmLogin
         Me.label6 = New System.Windows.Forms.Label()
         Me.label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -140,17 +139,6 @@ Partial Class frmLogin
         Me.Label8.Size = New System.Drawing.Size(14, 21)
         Me.Label8.TabIndex = 13
         Me.Label8.Text = " "
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI Light", 20.0!)
-        Me.Label5.ForeColor = System.Drawing.Color.DarkCyan
-        Me.Label5.Location = New System.Drawing.Point(556, 302)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(24, 37)
-        Me.Label5.TabIndex = 14
-        Me.Label5.Text = " "
         '
         'Panel2
         '
@@ -260,7 +248,6 @@ Partial Class frmLogin
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.label7)
         Me.Controls.Add(Me.label6)
@@ -301,7 +288,6 @@ Partial Class frmLogin
     Friend WithEvents txtUsername As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents btnEmergencyExit As Button
-    Friend WithEvents Label5 As Label
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
