@@ -260,7 +260,7 @@ Partial Class frmLogin
         Me.Controls.Add(Me.pictureBox3)
         Me.Controls.Add(Me.Label2)
         Me.DoubleBuffered = True
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmLogin"
