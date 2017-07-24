@@ -47,15 +47,6 @@ Public Class frmLogin
 
     End Sub
 
-    Private Sub btnEmergencyExit_Click(sender As Object, e As EventArgs) Handles btnEmergencyExit.Click
-        Dim EmergencyShutdown As New frmInputEmergencyPassword
-        EmergencyShutdown.ShowDialog()
-        If My.Settings.EmergencyPassword = EmergencyShutdown.EmergencyPassword Then
-            AllowWindowToClose = True
-            Application.Exit()
-        End If
-    End Sub
-
     Private Sub frmLogin_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If AllowWindowToClose = True Then
             'allow window to close
@@ -65,11 +56,6 @@ Public Class frmLogin
     End Sub
 
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnHelp.Click
-        frmHelp.ShowDialog()
 
     End Sub
 

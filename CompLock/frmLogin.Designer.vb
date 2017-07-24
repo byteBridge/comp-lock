@@ -33,8 +33,6 @@ Partial Class frmLogin
         Me.btnSignIn = New System.Windows.Forms.Button()
         Me.pictureBox4 = New System.Windows.Forms.PictureBox()
         Me.pictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.btnHelp = New System.Windows.Forms.Button()
-        Me.btnEmergencyExit = New System.Windows.Forms.Button()
         Me.mnuOptions = New System.Windows.Forms.MenuStrip()
         Me.tlstrpEmergencyExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.tlstrpHelp = New System.Windows.Forms.ToolStripMenuItem()
@@ -151,36 +149,6 @@ Partial Class frmLogin
         Me.pictureBox3.TabIndex = 8
         Me.pictureBox3.TabStop = False
         '
-        'btnHelp
-        '
-        Me.btnHelp.BackColor = System.Drawing.Color.Green
-        Me.btnHelp.FlatAppearance.BorderColor = System.Drawing.Color.Green
-        Me.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHelp.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.btnHelp.ForeColor = System.Drawing.Color.White
-        Me.btnHelp.Image = Global.CompLock.My.Resources.Resources.Help
-        Me.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHelp.Location = New System.Drawing.Point(1124, 116)
-        Me.btnHelp.Name = "btnHelp"
-        Me.btnHelp.Size = New System.Drawing.Size(139, 36)
-        Me.btnHelp.TabIndex = 5
-        Me.btnHelp.Text = "Help"
-        Me.btnHelp.UseVisualStyleBackColor = False
-        '
-        'btnEmergencyExit
-        '
-        Me.btnEmergencyExit.BackColor = System.Drawing.Color.OrangeRed
-        Me.btnEmergencyExit.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed
-        Me.btnEmergencyExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEmergencyExit.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.btnEmergencyExit.ForeColor = System.Drawing.Color.White
-        Me.btnEmergencyExit.Location = New System.Drawing.Point(920, 116)
-        Me.btnEmergencyExit.Name = "btnEmergencyExit"
-        Me.btnEmergencyExit.Size = New System.Drawing.Size(182, 35)
-        Me.btnEmergencyExit.TabIndex = 4
-        Me.btnEmergencyExit.Text = "Engage Emergency Exit"
-        Me.btnEmergencyExit.UseVisualStyleBackColor = False
-        '
         'mnuOptions
         '
         Me.mnuOptions.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tlstrpEmergencyExit, Me.tlstrpHelp})
@@ -194,7 +162,7 @@ Partial Class frmLogin
         '
         Me.tlstrpEmergencyExit.Name = "tlstrpEmergencyExit"
         Me.tlstrpEmergencyExit.Size = New System.Drawing.Size(99, 20)
-        Me.tlstrpEmergencyExit.Text = "Emergency Exit"
+        Me.tlstrpEmergencyExit.Text = "Emergency exit"
         '
         'tlstrpHelp
         '
@@ -211,8 +179,6 @@ Partial Class frmLogin
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1334, 669)
         Me.ControlBox = False
-        Me.Controls.Add(Me.btnHelp)
-        Me.Controls.Add(Me.btnEmergencyExit)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.txtPassword)
@@ -252,11 +218,9 @@ Partial Class frmLogin
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents txtUsername As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents btnEmergencyExit As Button
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
-    Friend WithEvents btnHelp As System.Windows.Forms.Button
     Friend WithEvents mnuOptions As MenuStrip
     Friend WithEvents tlstrpEmergencyExit As ToolStripMenuItem
     Friend WithEvents tlstrpHelp As ToolStripMenuItem
