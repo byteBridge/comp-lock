@@ -32,9 +32,6 @@ Partial Class frmLogin
         Me.label6 = New System.Windows.Forms.Label()
         Me.label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btnSignIn = New System.Windows.Forms.Button()
         Me.pictureBox4 = New System.Windows.Forms.PictureBox()
         Me.pictureBox3 = New System.Windows.Forms.PictureBox()
@@ -140,33 +137,6 @@ Partial Class frmLogin
         Me.Label8.TabIndex = 13
         Me.Label8.Text = " "
         '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.DarkCyan
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(2, 667)
-        Me.Panel2.TabIndex = 18
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.DarkCyan
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(0, 667)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1332, 2)
-        Me.Panel3.TabIndex = 20
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.DarkCyan
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel4.Location = New System.Drawing.Point(1332, 0)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(2, 669)
-        Me.Panel4.TabIndex = 19
-        '
         'btnSignIn
         '
         Me.btnSignIn.BackColor = System.Drawing.Color.Blue
@@ -245,9 +215,6 @@ Partial Class frmLogin
         Me.Controls.Add(Me.btnHelp)
         Me.Controls.Add(Me.btnEmergencyExit)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.label7)
         Me.Controls.Add(Me.label6)
