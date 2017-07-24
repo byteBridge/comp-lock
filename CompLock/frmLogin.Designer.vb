@@ -115,12 +115,11 @@ Partial Class frmLogin
         '
         'btnSignIn
         '
-        Me.btnSignIn.BackColor = System.Drawing.Color.Blue
+        Me.btnSignIn.BackColor = System.Drawing.Color.DarkCyan
         Me.btnSignIn.FlatAppearance.BorderSize = 0
         Me.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSignIn.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.btnSignIn.ForeColor = System.Drawing.Color.White
-        Me.btnSignIn.Image = CType(resources.GetObject("btnSignIn.Image"), System.Drawing.Image)
         Me.btnSignIn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnSignIn.Location = New System.Drawing.Point(349, 464)
         Me.btnSignIn.Name = "btnSignIn"
