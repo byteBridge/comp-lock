@@ -204,7 +204,6 @@ Partial Class frmLogin
         Me.MinimizeBox = False
         Me.Name = "frmLogin"
         Me.ShowInTaskbar = False
-        Me.Text = "Welcome..."
         Me.TopMost = True
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.pictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
