@@ -35,8 +35,12 @@ Partial Class frmLogin
         Me.pictureBox3 = New System.Windows.Forms.PictureBox()
         Me.btnHelp = New System.Windows.Forms.Button()
         Me.btnEmergencyExit = New System.Windows.Forms.Button()
+        Me.mnuOptions = New System.Windows.Forms.MenuStrip()
+        Me.tlstrpEmergencyExit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tlstrpHelp = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.pictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.mnuOptions.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label2
@@ -177,6 +181,27 @@ Partial Class frmLogin
         Me.btnEmergencyExit.Text = "Engage Emergency Exit"
         Me.btnEmergencyExit.UseVisualStyleBackColor = False
         '
+        'mnuOptions
+        '
+        Me.mnuOptions.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tlstrpEmergencyExit, Me.tlstrpHelp})
+        Me.mnuOptions.Location = New System.Drawing.Point(0, 0)
+        Me.mnuOptions.Name = "mnuOptions"
+        Me.mnuOptions.Size = New System.Drawing.Size(1334, 24)
+        Me.mnuOptions.TabIndex = 14
+        Me.mnuOptions.Text = "MenuStrip1"
+        '
+        'tlstrpEmergencyExit
+        '
+        Me.tlstrpEmergencyExit.Name = "tlstrpEmergencyExit"
+        Me.tlstrpEmergencyExit.Size = New System.Drawing.Size(99, 20)
+        Me.tlstrpEmergencyExit.Text = "Emergency Exit"
+        '
+        'tlstrpHelp
+        '
+        Me.tlstrpHelp.Name = "tlstrpHelp"
+        Me.tlstrpHelp.Size = New System.Drawing.Size(44, 20)
+        Me.tlstrpHelp.Text = "Help"
+        '
         'frmLogin
         '
         Me.AcceptButton = Me.btnSignIn
@@ -198,8 +223,10 @@ Partial Class frmLogin
         Me.Controls.Add(Me.pictureBox4)
         Me.Controls.Add(Me.pictureBox3)
         Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.mnuOptions)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.MainMenuStrip = Me.mnuOptions
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmLogin"
@@ -208,6 +235,8 @@ Partial Class frmLogin
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.pictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.mnuOptions.ResumeLayout(False)
+        Me.mnuOptions.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -228,4 +257,7 @@ Partial Class frmLogin
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents btnHelp As System.Windows.Forms.Button
+    Friend WithEvents mnuOptions As MenuStrip
+    Friend WithEvents tlstrpEmergencyExit As ToolStripMenuItem
+    Friend WithEvents tlstrpHelp As ToolStripMenuItem
 End Class

@@ -76,4 +76,18 @@ Public Class frmLogin
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub tlstrpEmergencyExit_Click(sender As Object, e As EventArgs) Handles tlstrpEmergencyExit.Click
+        Dim EmergencyShutdown As New frmInputEmergencyPassword
+        EmergencyShutdown.ShowDialog()
+        If My.Settings.EmergencyPassword = EmergencyShutdown.EmergencyPassword Then
+            AllowWindowToClose = True
+            Application.Exit()
+        End If
+    End Sub
+
+    Private Sub tlstrpHelp_Click(sender As Object, e As EventArgs) Handles tlstrpHelp.Click
+        frmHelp.ShowDialog()
+
+    End Sub
 End Class
