@@ -29,8 +29,6 @@ Partial Class frmLogin
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.label3 = New System.Windows.Forms.Label()
         Me.label4 = New System.Windows.Forms.Label()
-        Me.label6 = New System.Windows.Forms.Label()
-        Me.label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnSignIn = New System.Windows.Forms.Button()
         Me.pictureBox4 = New System.Windows.Forms.PictureBox()
@@ -99,30 +97,6 @@ Partial Class frmLogin
         Me.label4.Size = New System.Drawing.Size(71, 19)
         Me.label4.TabIndex = 5
         Me.label4.Text = "Username"
-        '
-        'label6
-        '
-        Me.label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.label6.AutoSize = True
-        Me.label6.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.label6.ForeColor = System.Drawing.Color.DarkCyan
-        Me.label6.Location = New System.Drawing.Point(125, 612)
-        Me.label6.Name = "label6"
-        Me.label6.Size = New System.Drawing.Size(309, 19)
-        Me.label6.TabIndex = 11
-        Me.label6.Text = "__________________________________________________"
-        '
-        'label7
-        '
-        Me.label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.label7.AutoSize = True
-        Me.label7.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
-        Me.label7.ForeColor = System.Drawing.Color.DarkCyan
-        Me.label7.Location = New System.Drawing.Point(125, 641)
-        Me.label7.Name = "label7"
-        Me.label7.Size = New System.Drawing.Size(314, 19)
-        Me.label7.TabIndex = 12
-        Me.label7.Text = "< DEVELOPED BY : { Kudakwashe Paradzayi }  />"
         '
         'Label8
         '
@@ -216,8 +190,6 @@ Partial Class frmLogin
         Me.Controls.Add(Me.btnEmergencyExit)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.label7)
-        Me.Controls.Add(Me.label6)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.label4)
         Me.Controls.Add(Me.label3)
@@ -241,8 +213,6 @@ Partial Class frmLogin
         Me.PerformLayout()
 
     End Sub
-    Friend label7 As System.Windows.Forms.Label
-    Friend label6 As System.Windows.Forms.Label
     Private pictureBox4 As System.Windows.Forms.PictureBox
     Private pictureBox3 As System.Windows.Forms.PictureBox
     Friend label4 As System.Windows.Forms.Label
