@@ -40,9 +40,9 @@ Partial Class frmNotification
         Me.Panel6.AllowDrop = True
         Me.Panel6.BackColor = System.Drawing.Color.OrangeRed
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel6.Location = New System.Drawing.Point(428, 2)
+        Me.Panel6.Location = New System.Drawing.Point(432, 2)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(2, 74)
+        Me.Panel6.Size = New System.Drawing.Size(2, 77)
         Me.Panel6.TabIndex = 50
         '
         'Panel5
@@ -50,9 +50,9 @@ Partial Class frmNotification
         Me.Panel5.AllowDrop = True
         Me.Panel5.BackColor = System.Drawing.Color.OrangeRed
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel5.Location = New System.Drawing.Point(2, 76)
+        Me.Panel5.Location = New System.Drawing.Point(2, 79)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(428, 2)
+        Me.Panel5.Size = New System.Drawing.Size(432, 2)
         Me.Panel5.TabIndex = 49
         '
         'Panel4
@@ -62,7 +62,7 @@ Partial Class frmNotification
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel4.Location = New System.Drawing.Point(0, 2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(2, 76)
+        Me.Panel4.Size = New System.Drawing.Size(2, 79)
         Me.Panel4.TabIndex = 47
         '
         'Panel3
@@ -72,7 +72,7 @@ Partial Class frmNotification
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(430, 2)
+        Me.Panel3.Size = New System.Drawing.Size(434, 2)
         Me.Panel3.TabIndex = 48
         '
         'lblHelloStudentName
@@ -129,7 +129,7 @@ Partial Class frmNotification
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(430, 78)
+        Me.ClientSize = New System.Drawing.Size(434, 81)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.lblHelloStudentName)
         Me.Controls.Add(Me.lblRemainingTime)
