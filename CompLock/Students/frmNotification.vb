@@ -14,11 +14,11 @@
             Timer1.Stop()
             Close()
         End If
-        If Me.Height <= 85 Then
-            If Height = 78 Then
+        If Me.Height <= 120 Then
+            If Height = 115 Then
                 GoUp = True
             End If
-            If Height = 85 Then
+            If Height >= 120 Then
                 GoUp = False
             End If
         End If
