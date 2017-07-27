@@ -28,8 +28,8 @@ Public Class frmRemainingTime
         lblHelloStudentName.Text = student.FullName()
 
         'Get the values of the Total time used by the student and the time limit from the database
-        TotalTimeUsed = TimeOperations.GetTotalUpTime(student.Username)
-        TimeLimits = TimeOperations.GetTimeLimits(student.Type)
+        TotalTimeUsed = student.TotalTimeUsed 'TimeOperations.GetTotalUpTime(student.Username)
+        TimeLimits = student.TimeLimits 'TimeOperations.GetTimeLimits(student.Type)
 
         'Calculate the amount of time used by the student by determining the differrence between the total time used and the time limits set by the administrator
         TimeSpanDuration = TimeLimits - TotalTimeUsed
