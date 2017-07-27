@@ -1,45 +1,47 @@
 ﻿
 Imports System.Data.OleDb
 Imports Newtonsoft.Json
+Imports System.Net.Http
+Imports CompLock.ResponseOjects
 Public Class frmLogin
     Private AllowWindowToClose As Boolean = False
 
 
-    Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
+    Private Async Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
 
         If txtUsername.Text = "" Then          'validation: Presence Check
             MsgBox("Please enter your username")
             txtUsername.Focus()
 
-        ElseIf txtPassword.Text = ""           'validation: Presence Check
+        ElseIf txtPassword.Text = "" Then           'validation: Presence Check
             MsgBox("Enter your password")
             txtPassword.Focus()
         Else 'Presence Check Passed.
-            Dim Student As New Student()
-            Student.Initialize(txtUsername.Text)
-            Try
-                Dim LoginSuccess As Boolean = Student.Login(txtUsername.Text, txtPassword.Text)
-                Select Case LoginSuccess
-                    Case True
-                        If Student.Type.ToLower <> "administrator" Then
-                            Dim StudentForm As New frmRemainingTime(Student)
-                            StudentForm.Show()
-                            AllowWindowToClose = True
-                            Me.Close()
-                        ElseIf Student.Type.ToLower = "administrator"
-                            Dim AdminForm As New frmAdminMainMenu
-                            AdminForm.NameOfAdministrator = Student.FullName()
-                            AdminForm.Show()
-                            AllowWindowToClose = True
-                            Me.Close()
-                        End If
+            Dim pairs As Dictionary(Of String, String) = New Dictionary(Of String, String)()
+            pairs.Add("username", txtUsername.Text)
+            pairs.Add("password", txtPassword.Text)
 
-                    Case False
-                        MessageBox.Show("The System could not log you in. You have entered invalid credentials, try again", "Invalid details", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                End Select
+            Dim formContent As FormUrlEncodedContent = New FormUrlEncodedContent(pairs)
+
+            Try
+
+                Dim http = New HttpClient()
+                http.BaseAddress = New Uri("http://localhost:3000")
+                Dim response = Await http.PostAsync("/auth/login", formContent)
+                Dim json = Await response.Content.ReadAsStringAsync
+
+                Dim Student As New Student()
+
+                If response.StatusCode = 200 Then
+                    Dim r As Success = JsonConvert.DeserializeObject(Of Success)(json)
+                    MsgBox("success fully logged in " + r.user.type)
+                Else
+                    Dim r As Errors = JsonConvert.DeserializeObject(Of Errors)(json)
+                    MsgBox("Access denied " + r.message)
+                End If
 
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MsgBox(ex.Message)
             End Try
 
         End If
