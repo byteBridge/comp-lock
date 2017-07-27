@@ -31,10 +31,32 @@ Public Class frmLogin
                 Dim json = Await response.Content.ReadAsStringAsync
 
                 Dim Student As New Student()
-
                 If response.StatusCode = 200 Then
                     Dim r As Success = JsonConvert.DeserializeObject(Of Success)(json)
                     MsgBox("success fully logged in " + r.user.type)
+                    With r.user
+                        Student.Blocked = .blocked
+                        Student.FirstName = .f_name
+                        Student.Surname = .s_name
+                        Student.Type = .type
+                        Student.Username = .username
+
+                    End With
+
+                    If Student.Type.ToLower() <> "administrator" Then
+                        With r.user
+                            Student.TotalTimeUsed = .used_time
+                            Student.TimeLimits = .time_limit
+                            Student.RemainingTime = .remaining_time
+                        End With
+                        Dim StudentForm As New frmRemainingTime(Student)
+                        StudentForm.Show()
+                        AllowWindowToClose = True
+                        Me.Close()
+                        'MsgBox("non admin " + Student.Type)
+                    Else
+                        MsgBox("admin" + Student.Type)
+                    End If
                 Else
                     Dim r As Errors = JsonConvert.DeserializeObject(Of Errors)(json)
                     MsgBox("Access denied " + r.message)
