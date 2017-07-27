@@ -6,7 +6,7 @@
         Property blocked As Boolean
         Property type As String
         Property login_time As String
-        Property time_lmit As String
+        Property time_limit As String
         Property remaining_time As String
         Property used_time As String
     End Class
