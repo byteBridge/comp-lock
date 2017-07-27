@@ -54,6 +54,10 @@
     <Reference Include="itextsharp">
       <HintPath>..\..\..\..\..\..\..\Kuda lenovo restore\Kudakwashe Lenovo Backup\KayOS\Librae\Backup\Current UI\Librae[Father]\Librae\itextsharp.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Npgsql">
       <HintPath>..\..\..\..\Visual Studio 2012\Projects\Part Time\Computer Control_7 - Copy - compatible\winsx_wpf\bin\Debug\Npgsql.dll</HintPath>
     </Reference>
@@ -166,6 +170,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ResponseObjects.vb" />
     <Compile Include="SplashScreen1.Designer.vb">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
     </Compile>
