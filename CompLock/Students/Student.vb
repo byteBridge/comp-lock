@@ -104,6 +104,22 @@ Public Class Student
         End Set
     End Property
 
+    ''' <summary>
+    ''' The total amount of time the user has used today
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property TotalTimeUsed As String
+
+    ''' <summary>
+    ''' The limits on how much time a student should use as provisioned by the administrator
+    ''' </summary>
+    Public TimeLimits As String
+
+    ''' <summary>
+    ''' The amount of time left before the account is logged out
+    ''' To be used on the initial load of the frmRemainingTime
+    ''' </summary>
+    Public RemainingTime As String
 
 #End Region
 #Region "Methods"
