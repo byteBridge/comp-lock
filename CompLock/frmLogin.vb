@@ -6,8 +6,25 @@ Imports CompLock.ResponseOjects
 Public Class frmLogin
     Private AllowWindowToClose As Boolean = False
 
+    ''' <summary>
+    ''' Change the state of the signin button (text and enabled)
+    ''' to show that the app is loading
+    ''' </summary>
+    ''' <param name="show">If true the progress shows, else it does not</param>
+    Sub showProgress(show As Boolean)
+        If show Then
+            ' Show progress and disable button
+            btnSignIn.Text = "Signing in ..."
+            btnSignIn.Enabled = False
+        Else
+            ' Show progress and disable button
+            btnSignIn.Text = "Signin"
+            btnSignIn.Enabled = True
+        End If
+    End Sub
 
     Private Async Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
+        showProgress(True)
 
         If txtUsername.Text = "" Then          'validation: Presence Check
             MsgBox("Please enter your username")
@@ -59,10 +76,12 @@ Public Class frmLogin
                     End If
                 Else
                     Dim r As Errors = JsonConvert.DeserializeObject(Of Errors)(json)
+                    showProgress(False)
                     MsgBox("Access denied " + r.message)
                 End If
 
             Catch ex As Exception
+                showProgress(False)
                 MsgBox(ex.Message)
             End Try
 
