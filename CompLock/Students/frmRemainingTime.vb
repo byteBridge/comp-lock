@@ -1,5 +1,5 @@
 ﻿Imports CompLock
-
+Imports System.Net.Http
 Public Class frmRemainingTime
     Private Student As Student
     Private AllowWindowToClose As Boolean = False
@@ -57,16 +57,13 @@ Public Class frmRemainingTime
 
     Private Sub frmRemainingTime_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If AllowWindowToClose = True Then
-            Student.GoOffline()
-            Student.LogSession(StartTime, Duration.ToString("HH:mm:ss"), TodayDate, Environment.UserName)
-
+            Student.Logout(StartTime, Duration.ToString("HH:mm:ss"), TodayDate, Environment.UserName)
             'close the notification window if it is open
             frmNotification.Close()
         Else
             'record the entries of today's log session even when the computer is being shutdown or the app is being closed remotely
             If e.CloseReason <> CloseReason.UserClosing Then
-                Student.GoOffline()
-                Student.LogSession(StartTime, Duration.ToString("HH:mm:ss"), TodayDate, Environment.UserName)
+                Student.Logout(StartTime, Duration.ToString("HH:mm:ss"), TodayDate, Environment.UserName)
 
                 'close the notification window if it is open
                 frmNotification.Close()
