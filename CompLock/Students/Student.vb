@@ -1,7 +1,7 @@
 ﻿
 
 Imports Npgsql
-
+Imports System.Net.Http
 
 Public Class Student
 #Region "Fields"
@@ -124,8 +124,28 @@ Public Class Student
 #End Region
 #Region "Methods"
 
+    ''' <summary>
+    ''' Log out the user. Logs the session as well
+    ''' </summary>
+    ''' <param name="StartTime"></param>
+    ''' <param name="Duration"></param>
+    ''' <param name="LogDate"></param>
+    ''' <param name="ComputerName"></param>
+    Friend Async Sub Logout(StartTime As String, Duration As String, LogDate As String, ComputerName As String)
+        Dim pairs As Dictionary(Of String, String) = New Dictionary(Of String, String)()
+        pairs.Add("username", Me.Username)
+        pairs.Add("start_time", StartTime)
+        pairs.Add("computer_name", ComputerName)
+        pairs.Add("log_date", LogDate)
+        pairs.Add("duration", Duration)
 
+        Dim formContent As FormUrlEncodedContent = New FormUrlEncodedContent(pairs)
 
+        Dim http = New HttpClient()
+        http.BaseAddress = New Uri("http://localhost:3000")
+        Dim response = Await http.PostAsync("/auth/logout", formContent)
+        MsgBox(Await response.Content.ReadAsStringAsync)
+    End Sub
 
     ''' <summary>
     ''' Deletes the member completely fom the database. Does'nt delete his or her history
