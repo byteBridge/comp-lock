@@ -42,7 +42,6 @@ Public Class frmLogin
                 Dim Student As New Student()
                 If response.StatusCode = 200 Then
                     Dim r As Success = JsonConvert.DeserializeObject(Of Success)(json)
-                    MsgBox("success fully logged in " + r.user.type)
                     With r.user
                         Student.Blocked = .blocked
                         Student.FirstName = .f_name
@@ -62,19 +61,22 @@ Public Class frmLogin
                         StudentForm.Show()
                         AllowWindowToClose = True
                         Me.Close()
-                        'MsgBox("non admin " + Student.Type)
                     Else
-                        MsgBox("admin" + Student.Type)
+                        Dim AdminForm As New frmAdminMainMenu
+                        AdminForm.NameOfAdministrator = Student.FullName()
+                        AdminForm.Show()
+                        AllowWindowToClose = True
+                        Me.Close()
                     End If
                 Else
                     Dim r As Errors = JsonConvert.DeserializeObject(Of Errors)(json)
                     showProgress(False)
-                    MsgBox("Access denied " + r.message)
+                    MessageBox.Show(r.message, "Something's not right", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
 
             Catch ex As Exception
                 showProgress(False)
-                MsgBox(ex.Message)
+                MessageBox.Show(ex.Message, "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
 
         End If
