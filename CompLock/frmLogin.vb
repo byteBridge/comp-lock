@@ -44,7 +44,7 @@ Public Class frmLogin
 
                 Dim http = New HttpClient()
                 http.BaseAddress = New Uri("http://localhost:3000")
-                Dim response = Await http.PostAsync("/auth/login", formContent)
+                Dim response = Await http.PostAsync("/auth/login?app=desktop&computer_name=" + Environment.UserName, formContent)
                 Dim json = Await response.Content.ReadAsStringAsync
 
                 Dim Student As New Student()
