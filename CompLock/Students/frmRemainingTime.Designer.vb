@@ -400,6 +400,7 @@ Partial Class frmRemainingTime
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(430, 60)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.lblComputerName)
         Me.Controls.Add(Me.Panel1)
@@ -428,12 +429,13 @@ Partial Class frmRemainingTime
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PictureBox3)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmRemainingTime"
         Me.ShowInTaskbar = False
-        Me.Text = "Anderson Computer Management System"
+        Me.Text = "My portal"
         Me.TopMost = True
         Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
