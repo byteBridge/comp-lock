@@ -82,9 +82,10 @@ Partial Class frmNotification
         Me.lblHelloStudentName.ForeColor = System.Drawing.Color.DarkCyan
         Me.lblHelloStudentName.Location = New System.Drawing.Point(67, 24)
         Me.lblHelloStudentName.Name = "lblHelloStudentName"
-        Me.lblHelloStudentName.Size = New System.Drawing.Size(342, 42)
+        Me.lblHelloStudentName.Size = New System.Drawing.Size(368, 42)
         Me.lblHelloStudentName.TabIndex = 51
-        Me.lblHelloStudentName.Text = "Can you wind up your work. 5 minutes left before " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "the system logs you out."
+        Me.lblHelloStudentName.Text = "Can you wind up your work. It is 5 minutes left before " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "the system logs you out." &
+    ""
         '
         'lblRemainingTime
         '
@@ -130,10 +131,10 @@ Partial Class frmNotification
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(434, 81)
+        Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.lblHelloStudentName)
         Me.Controls.Add(Me.lblRemainingTime)
-        Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
