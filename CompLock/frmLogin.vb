@@ -12,15 +12,7 @@ Public Class frmLogin
     ''' </summary>
     ''' <param name="show">If true the progress shows, else it does not</param>
     Sub showProgress(show As Boolean)
-        If show Then
-            ' Show progress and disable button
-            btnSignIn.Text = "Signing in ..."
-            btnSignIn.Enabled = False
-        Else
-            ' Show progress and disable button
-            btnSignIn.Text = "Signin"
-            btnSignIn.Enabled = True
-        End If
+        progSignin.Visible = show
     End Sub
 
     Private Async Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click

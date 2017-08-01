@@ -36,6 +36,7 @@ Partial Class frmLogin
         Me.mnuOptions = New System.Windows.Forms.MenuStrip()
         Me.tlstrpEmergencyExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.tlstrpHelp = New System.Windows.Forms.ToolStripMenuItem()
+        Me.progSignin = New System.Windows.Forms.ProgressBar()
         CType(Me.pictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.mnuOptions.SuspendLayout()
@@ -169,6 +170,17 @@ Partial Class frmLogin
         Me.tlstrpHelp.Size = New System.Drawing.Size(44, 20)
         Me.tlstrpHelp.Text = "Help"
         '
+        'progSignin
+        '
+        Me.progSignin.Dock = System.Windows.Forms.DockStyle.Top
+        Me.progSignin.Location = New System.Drawing.Point(0, 24)
+        Me.progSignin.MarqueeAnimationSpeed = 1
+        Me.progSignin.Name = "progSignin"
+        Me.progSignin.Size = New System.Drawing.Size(1334, 5)
+        Me.progSignin.Style = System.Windows.Forms.ProgressBarStyle.Marquee
+        Me.progSignin.TabIndex = 15
+        Me.progSignin.Visible = False
+        '
         'frmLogin
         '
         Me.AcceptButton = Me.btnSignIn
@@ -178,6 +190,7 @@ Partial Class frmLogin
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1334, 669)
         Me.ControlBox = False
+        Me.Controls.Add(Me.progSignin)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.txtPassword)
@@ -223,4 +236,5 @@ Partial Class frmLogin
     Friend WithEvents mnuOptions As MenuStrip
     Friend WithEvents tlstrpEmergencyExit As ToolStripMenuItem
     Friend WithEvents tlstrpHelp As ToolStripMenuItem
+    Friend WithEvents progSignin As ProgressBar
 End Class
