@@ -118,8 +118,11 @@ Public Class frmRemainingTime
     End Sub
 
     Private Sub btnSettings_Click(sender As Object, e As EventArgs) Handles btnSettings.Click
-        Dim MyAccount As New frmMyAccount(Student, frmMyAccount.AccessLevel.Student)
-        MyAccount.ShowDialog()
+        Try
+            Process.Start("http://localhost:3000/students/" + Student.Username)
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     ''' <summary>
@@ -141,7 +144,7 @@ Public Class frmRemainingTime
 
     Private Sub btnViewHelp_Click(sender As Object, e As EventArgs) Handles btnViewHelp.Click
         Try
-            Process.Start("Help\faqs.html")
+            Process.Start("http://localhost:3000/help")
         Catch ex As Exception
 
         End Try
