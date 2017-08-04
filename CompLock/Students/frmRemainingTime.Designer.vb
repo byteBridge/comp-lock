@@ -38,7 +38,6 @@ Partial Class frmRemainingTime
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnViewHelp = New System.Windows.Forms.Button()
         Me.btnSettings = New System.Windows.Forms.Button()
-        Me.btnToggleWindow = New System.Windows.Forms.Button()
         Me.btnSignOut = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
@@ -162,11 +161,11 @@ Partial Class frmRemainingTime
         'lblRemainingTime
         '
         Me.lblRemainingTime.AutoSize = True
-        Me.lblRemainingTime.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.lblRemainingTime.Font = New System.Drawing.Font("Segoe UI", 16.0!)
         Me.lblRemainingTime.ForeColor = System.Drawing.Color.DarkCyan
         Me.lblRemainingTime.Location = New System.Drawing.Point(56, 28)
         Me.lblRemainingTime.Name = "lblRemainingTime"
-        Me.lblRemainingTime.Size = New System.Drawing.Size(56, 25)
+        Me.lblRemainingTime.Size = New System.Drawing.Size(66, 30)
         Me.lblRemainingTime.TabIndex = 34
         Me.lblRemainingTime.Text = "10:30"
         '
@@ -188,7 +187,7 @@ Partial Class frmRemainingTime
         'btnViewHelp
         '
         Me.btnViewHelp.Image = Global.CompLock.My.Resources.Resources.Help_teal
-        Me.btnViewHelp.Location = New System.Drawing.Point(317, 16)
+        Me.btnViewHelp.Location = New System.Drawing.Point(308, 18)
         Me.btnViewHelp.Name = "btnViewHelp"
         Me.btnViewHelp.Size = New System.Drawing.Size(30, 30)
         Me.btnViewHelp.TabIndex = 49
@@ -198,22 +197,12 @@ Partial Class frmRemainingTime
         'btnSettings
         '
         Me.btnSettings.Image = Global.CompLock.My.Resources.Resources.User_Setting_01_teal
-        Me.btnSettings.Location = New System.Drawing.Point(282, 16)
+        Me.btnSettings.Location = New System.Drawing.Point(171, 28)
         Me.btnSettings.Name = "btnSettings"
-        Me.btnSettings.Size = New System.Drawing.Size(30, 30)
+        Me.btnSettings.Size = New System.Drawing.Size(98, 30)
         Me.btnSettings.TabIndex = 48
         Me.ToolTip1.SetToolTip(Me.btnSettings, "Settings | Change your password")
         Me.btnSettings.UseVisualStyleBackColor = True
-        '
-        'btnToggleWindow
-        '
-        Me.btnToggleWindow.Image = Global.CompLock.My.Resources.Resources.Arrowhead_down_teal
-        Me.btnToggleWindow.Location = New System.Drawing.Point(352, 16)
-        Me.btnToggleWindow.Name = "btnToggleWindow"
-        Me.btnToggleWindow.Size = New System.Drawing.Size(30, 30)
-        Me.btnToggleWindow.TabIndex = 47
-        Me.ToolTip1.SetToolTip(Me.btnToggleWindow, "View Hidden Items")
-        Me.btnToggleWindow.UseVisualStyleBackColor = True
         '
         'btnSignOut
         '
@@ -223,9 +212,9 @@ Partial Class frmRemainingTime
         Me.btnSignOut.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.btnSignOut.ForeColor = System.Drawing.Color.White
         Me.btnSignOut.Image = Global.CompLock.My.Resources.Resources.ArrowHeadRight_white
-        Me.btnSignOut.Location = New System.Drawing.Point(387, 17)
+        Me.btnSignOut.Location = New System.Drawing.Point(353, 17)
         Me.btnSignOut.Name = "btnSignOut"
-        Me.btnSignOut.Size = New System.Drawing.Size(30, 29)
+        Me.btnSignOut.Size = New System.Drawing.Size(64, 29)
         Me.btnSignOut.TabIndex = 7
         Me.ToolTip1.SetToolTip(Me.btnSignOut, "Sign out")
         Me.btnSignOut.UseVisualStyleBackColor = False
@@ -285,7 +274,7 @@ Partial Class frmRemainingTime
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel4.Location = New System.Drawing.Point(0, 2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(2, 58)
+        Me.Panel4.Size = New System.Drawing.Size(2, 208)
         Me.Panel4.TabIndex = 5
         '
         'Panel5
@@ -293,7 +282,7 @@ Partial Class frmRemainingTime
         Me.Panel5.AllowDrop = True
         Me.Panel5.BackColor = System.Drawing.Color.DarkCyan
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel5.Location = New System.Drawing.Point(2, 58)
+        Me.Panel5.Location = New System.Drawing.Point(2, 208)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(428, 2)
         Me.Panel5.TabIndex = 45
@@ -305,7 +294,7 @@ Partial Class frmRemainingTime
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel6.Location = New System.Drawing.Point(428, 2)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(2, 56)
+        Me.Panel6.Size = New System.Drawing.Size(2, 206)
         Me.Panel6.TabIndex = 46
         '
         'Panel7
@@ -399,7 +388,7 @@ Partial Class frmRemainingTime
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(430, 60)
+        Me.ClientSize = New System.Drawing.Size(430, 210)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.lblComputerName)
@@ -412,7 +401,6 @@ Partial Class frmRemainingTime
         Me.Controls.Add(Me.btnSettings)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.btnToggleWindow)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel5)
@@ -436,7 +424,6 @@ Partial Class frmRemainingTime
         Me.Name = "frmRemainingTime"
         Me.ShowInTaskbar = False
         Me.Text = "My portal"
-        Me.TopMost = True
         Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -471,7 +458,6 @@ Partial Class frmRemainingTime
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
-    Friend WithEvents btnToggleWindow As System.Windows.Forms.Button
     Friend WithEvents btnSettings As System.Windows.Forms.Button
     Friend WithEvents Panel7 As System.Windows.Forms.Panel
     Friend WithEvents btnViewHelp As System.Windows.Forms.Button

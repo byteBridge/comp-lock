@@ -16,8 +16,6 @@ Public Class frmRemainingTime
     'these variables keep track of the count downn
     Private Hours, Minutes, Seconds As Integer
 
-    Private ToggleWindow As Boolean = False 'keeps the state of the window
-
     Public Sub New(student As Student)
         'initialize the form first
         InitializeComponent()
@@ -96,7 +94,7 @@ Public Class frmRemainingTime
         ' NotifyIcon1.ShowBalloonTip(0)
         Dim Rect As New Rectangle
         Rect = Screen.GetWorkingArea(New Point(0, 0))
-        Me.Location = New Point(20, Rect.Height - 100)
+        Me.Location = New Point(10, Rect.Height - 250)
 
 
     End Sub
@@ -104,28 +102,6 @@ Public Class frmRemainingTime
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         NotifyIcon1.ShowBalloonTip(2000)
         NotifyIcon1.Visible = True
-    End Sub
-
-    Private Sub btnToggleWindow_Click(sender As Object, e As EventArgs) Handles btnToggleWindow.Click
-
-        Select Case ToggleWindow
-            Case False
-                btnToggleWindow.Image = My.Resources.UpArrow_01_teal
-
-                MoveWindow(-155)
-                Me.Size = New Size(430, 215) 'expand the window
-                ToggleWindow = True
-
-            Case True
-                btnToggleWindow.Image = My.Resources.Arrowhead_down_teal
-
-                MoveWindow(155)
-                Me.Size = New Size(430, 60) 'Collapse the window
-                ToggleWindow = False
-        End Select
-
-        'whether the notification is shown or not, upadate the new location of the nofification.
-        frmNotification.Location = New Point(Me.Location.X, Me.Location.Y - 100)
     End Sub
 
     ''' <summary>
