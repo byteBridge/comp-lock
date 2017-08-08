@@ -16,8 +16,6 @@ Public Class frmLogin
     End Sub
 
     Private Async Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
-        showProgress(True)
-
         If txtUsername.Text = "" Then          'validation: Presence Check
             MsgBox("Please enter your username")
             txtUsername.Focus()
@@ -25,7 +23,10 @@ Public Class frmLogin
         ElseIf txtPassword.Text = "" Then           'validation: Presence Check
             MsgBox("Enter your password")
             txtPassword.Focus()
+
         Else 'Presence Check Passed.
+            showProgress(True)
+
             Dim pairs As Dictionary(Of String, String) = New Dictionary(Of String, String)()
             pairs.Add("username", txtUsername.Text)
             pairs.Add("password", txtPassword.Text)
