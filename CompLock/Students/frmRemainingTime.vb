@@ -41,7 +41,6 @@ Public Class frmRemainingTime
         lblComputerName.Text = Environment.UserName
         'Start the timer so that count down begins
         tmrStudentSession.Start()
-        student.GoOnline()
     End Sub
 
     Private Sub btnSignOut_Click(sender As Object, e As EventArgs) Handles btnSignOut.Click
@@ -119,7 +118,7 @@ Public Class frmRemainingTime
 
     Private Sub btnSettings_Click(sender As Object, e As EventArgs) Handles btnSettings.Click
         Try
-            Process.Start("http://localhost:3000/students/" + Student.Username)
+            Process.Start("http://localhost:3000/#students/" + Student.Username)
         Catch ex As Exception
 
         End Try
@@ -144,7 +143,7 @@ Public Class frmRemainingTime
 
     Private Sub btnViewHelp_Click(sender As Object, e As EventArgs) Handles btnViewHelp.Click
         Try
-            Process.Start("http://localhost:3000/help")
+            Process.Start("http://localhost:3000/#help")
         Catch ex As Exception
 
         End Try
