@@ -38,7 +38,6 @@ Partial Class frmRemainingTime
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnViewHelp = New System.Windows.Forms.Button()
         Me.btnSettings = New System.Windows.Forms.Button()
-        Me.btnToggleWindow = New System.Windows.Forms.Button()
         Me.btnSignOut = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
@@ -67,7 +66,7 @@ Partial Class frmRemainingTime
         Me.lblHelloStudentName.AutoSize = True
         Me.lblHelloStudentName.Font = New System.Drawing.Font("Segoe UI Light", 12.0!)
         Me.lblHelloStudentName.ForeColor = System.Drawing.Color.DarkCyan
-        Me.lblHelloStudentName.Location = New System.Drawing.Point(59, 8)
+        Me.lblHelloStudentName.Location = New System.Drawing.Point(59, 15)
         Me.lblHelloStudentName.Name = "lblHelloStudentName"
         Me.lblHelloStudentName.Size = New System.Drawing.Size(160, 21)
         Me.lblHelloStudentName.TabIndex = 3
@@ -77,7 +76,7 @@ Partial Class frmRemainingTime
         '
         Me.Panel2.AllowDrop = True
         Me.Panel2.BackColor = System.Drawing.Color.DarkCyan
-        Me.Panel2.Location = New System.Drawing.Point(11, 64)
+        Me.Panel2.Location = New System.Drawing.Point(11, 77)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(410, 1)
         Me.Panel2.TabIndex = 4
@@ -98,7 +97,7 @@ Partial Class frmRemainingTime
         Me.lblDuration.AutoSize = True
         Me.lblDuration.Font = New System.Drawing.Font("Segoe UI Light", 14.0!)
         Me.lblDuration.ForeColor = System.Drawing.Color.DarkCyan
-        Me.lblDuration.Location = New System.Drawing.Point(213, 180)
+        Me.lblDuration.Location = New System.Drawing.Point(216, 188)
         Me.lblDuration.Name = "lblDuration"
         Me.lblDuration.Size = New System.Drawing.Size(56, 25)
         Me.lblDuration.TabIndex = 37
@@ -109,7 +108,7 @@ Partial Class frmRemainingTime
         Me.lblMaxTimeAllowed.AutoSize = True
         Me.lblMaxTimeAllowed.Font = New System.Drawing.Font("Segoe UI Light", 14.0!)
         Me.lblMaxTimeAllowed.ForeColor = System.Drawing.Color.DarkCyan
-        Me.lblMaxTimeAllowed.Location = New System.Drawing.Point(213, 146)
+        Me.lblMaxTimeAllowed.Location = New System.Drawing.Point(216, 154)
         Me.lblMaxTimeAllowed.Name = "lblMaxTimeAllowed"
         Me.lblMaxTimeAllowed.Size = New System.Drawing.Size(91, 25)
         Me.lblMaxTimeAllowed.TabIndex = 36
@@ -120,7 +119,7 @@ Partial Class frmRemainingTime
         Me.lblStartTime.AutoSize = True
         Me.lblStartTime.Font = New System.Drawing.Font("Segoe UI Light", 14.0!)
         Me.lblStartTime.ForeColor = System.Drawing.Color.DarkCyan
-        Me.lblStartTime.Location = New System.Drawing.Point(216, 107)
+        Me.lblStartTime.Location = New System.Drawing.Point(216, 120)
         Me.lblStartTime.Name = "lblStartTime"
         Me.lblStartTime.Size = New System.Drawing.Size(53, 25)
         Me.lblStartTime.TabIndex = 35
@@ -131,7 +130,7 @@ Partial Class frmRemainingTime
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!)
         Me.Label3.ForeColor = System.Drawing.Color.Gray
-        Me.Label3.Location = New System.Drawing.Point(12, 146)
+        Me.Label3.Location = New System.Drawing.Point(12, 158)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(180, 21)
         Me.Label3.TabIndex = 23
@@ -142,7 +141,7 @@ Partial Class frmRemainingTime
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!)
         Me.Label5.ForeColor = System.Drawing.Color.Gray
-        Me.Label5.Location = New System.Drawing.Point(12, 111)
+        Me.Label5.Location = New System.Drawing.Point(12, 124)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(100, 21)
         Me.Label5.TabIndex = 25
@@ -153,7 +152,7 @@ Partial Class frmRemainingTime
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!)
         Me.Label6.ForeColor = System.Drawing.Color.Gray
-        Me.Label6.Location = New System.Drawing.Point(12, 180)
+        Me.Label6.Location = New System.Drawing.Point(12, 192)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(131, 21)
         Me.Label6.TabIndex = 26
@@ -162,11 +161,11 @@ Partial Class frmRemainingTime
         'lblRemainingTime
         '
         Me.lblRemainingTime.AutoSize = True
-        Me.lblRemainingTime.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.lblRemainingTime.Font = New System.Drawing.Font("Segoe UI", 16.0!)
         Me.lblRemainingTime.ForeColor = System.Drawing.Color.DarkCyan
-        Me.lblRemainingTime.Location = New System.Drawing.Point(56, 28)
+        Me.lblRemainingTime.Location = New System.Drawing.Point(58, 36)
         Me.lblRemainingTime.Name = "lblRemainingTime"
-        Me.lblRemainingTime.Size = New System.Drawing.Size(56, 25)
+        Me.lblRemainingTime.Size = New System.Drawing.Size(66, 30)
         Me.lblRemainingTime.TabIndex = 34
         Me.lblRemainingTime.Text = "10:30"
         '
@@ -175,7 +174,7 @@ Partial Class frmRemainingTime
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Light", 14.0!)
         Me.Label7.ForeColor = System.Drawing.Color.DarkCyan
-        Me.Label7.Location = New System.Drawing.Point(40, 74)
+        Me.Label7.Location = New System.Drawing.Point(40, 87)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(133, 25)
         Me.Label7.TabIndex = 42
@@ -187,46 +186,49 @@ Partial Class frmRemainingTime
         '
         'btnViewHelp
         '
+        Me.btnViewHelp.BackColor = System.Drawing.Color.Teal
+        Me.btnViewHelp.FlatAppearance.BorderSize = 0
+        Me.btnViewHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnViewHelp.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.btnViewHelp.ForeColor = System.Drawing.Color.White
         Me.btnViewHelp.Image = Global.CompLock.My.Resources.Resources.Help_teal
-        Me.btnViewHelp.Location = New System.Drawing.Point(317, 16)
+        Me.btnViewHelp.Location = New System.Drawing.Point(276, 8)
         Me.btnViewHelp.Name = "btnViewHelp"
-        Me.btnViewHelp.Size = New System.Drawing.Size(30, 30)
+        Me.btnViewHelp.Size = New System.Drawing.Size(57, 29)
         Me.btnViewHelp.TabIndex = 49
+        Me.btnViewHelp.Text = "Help"
         Me.ToolTip1.SetToolTip(Me.btnViewHelp, "View Help")
-        Me.btnViewHelp.UseVisualStyleBackColor = True
+        Me.btnViewHelp.UseVisualStyleBackColor = False
         '
         'btnSettings
         '
-        Me.btnSettings.Image = Global.CompLock.My.Resources.Resources.User_Setting_01_teal
-        Me.btnSettings.Location = New System.Drawing.Point(282, 16)
+        Me.btnSettings.BackColor = System.Drawing.Color.Teal
+        Me.btnSettings.FlatAppearance.BorderSize = 0
+        Me.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSettings.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.btnSettings.ForeColor = System.Drawing.Color.White
+        Me.btnSettings.Location = New System.Drawing.Point(276, 43)
         Me.btnSettings.Name = "btnSettings"
-        Me.btnSettings.Size = New System.Drawing.Size(30, 30)
+        Me.btnSettings.Size = New System.Drawing.Size(134, 30)
         Me.btnSettings.TabIndex = 48
+        Me.btnSettings.Text = "My Accout"
         Me.ToolTip1.SetToolTip(Me.btnSettings, "Settings | Change your password")
-        Me.btnSettings.UseVisualStyleBackColor = True
-        '
-        'btnToggleWindow
-        '
-        Me.btnToggleWindow.Image = Global.CompLock.My.Resources.Resources.Arrowhead_down_teal
-        Me.btnToggleWindow.Location = New System.Drawing.Point(352, 16)
-        Me.btnToggleWindow.Name = "btnToggleWindow"
-        Me.btnToggleWindow.Size = New System.Drawing.Size(30, 30)
-        Me.btnToggleWindow.TabIndex = 47
-        Me.ToolTip1.SetToolTip(Me.btnToggleWindow, "View Hidden Items")
-        Me.btnToggleWindow.UseVisualStyleBackColor = True
+        Me.btnSettings.UseVisualStyleBackColor = False
         '
         'btnSignOut
         '
-        Me.btnSignOut.BackColor = System.Drawing.Color.DarkOrange
-        Me.btnSignOut.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan
+        Me.btnSignOut.BackColor = System.Drawing.Color.White
+        Me.btnSignOut.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed
         Me.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSignOut.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.btnSignOut.ForeColor = System.Drawing.Color.White
-        Me.btnSignOut.Image = Global.CompLock.My.Resources.Resources.ArrowHeadRight_white
-        Me.btnSignOut.Location = New System.Drawing.Point(387, 17)
+        Me.btnSignOut.Font = New System.Drawing.Font("Segoe UI Black", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSignOut.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnSignOut.Location = New System.Drawing.Point(339, 8)
         Me.btnSignOut.Name = "btnSignOut"
-        Me.btnSignOut.Size = New System.Drawing.Size(30, 29)
+        Me.btnSignOut.Size = New System.Drawing.Size(71, 29)
         Me.btnSignOut.TabIndex = 7
+        Me.btnSignOut.Text = "Sign out"
+        Me.btnSignOut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.ToolTip1.SetToolTip(Me.btnSignOut, "Sign out")
         Me.btnSignOut.UseVisualStyleBackColor = False
         '
@@ -285,7 +287,7 @@ Partial Class frmRemainingTime
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel4.Location = New System.Drawing.Point(0, 2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(2, 58)
+        Me.Panel4.Size = New System.Drawing.Size(2, 224)
         Me.Panel4.TabIndex = 5
         '
         'Panel5
@@ -293,7 +295,7 @@ Partial Class frmRemainingTime
         Me.Panel5.AllowDrop = True
         Me.Panel5.BackColor = System.Drawing.Color.DarkCyan
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel5.Location = New System.Drawing.Point(2, 58)
+        Me.Panel5.Location = New System.Drawing.Point(2, 224)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(428, 2)
         Me.Panel5.TabIndex = 45
@@ -305,23 +307,23 @@ Partial Class frmRemainingTime
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel6.Location = New System.Drawing.Point(428, 2)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(2, 56)
+        Me.Panel6.Size = New System.Drawing.Size(2, 222)
         Me.Panel6.TabIndex = 46
         '
         'Panel7
         '
         Me.Panel7.AllowDrop = True
         Me.Panel7.BackColor = System.Drawing.Color.DarkCyan
-        Me.Panel7.Location = New System.Drawing.Point(276, 5)
+        Me.Panel7.Location = New System.Drawing.Point(255, 8)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(2, 50)
+        Me.Panel7.Size = New System.Drawing.Size(2, 64)
         Me.Panel7.TabIndex = 6
         '
         'Panel1
         '
         Me.Panel1.AllowDrop = True
         Me.Panel1.BackColor = System.Drawing.Color.DarkGray
-        Me.Panel1.Location = New System.Drawing.Point(215, 71)
+        Me.Panel1.Location = New System.Drawing.Point(215, 84)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1, 31)
         Me.Panel1.TabIndex = 7
@@ -331,7 +333,7 @@ Partial Class frmRemainingTime
         Me.lblComputerName.AutoSize = True
         Me.lblComputerName.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!)
         Me.lblComputerName.ForeColor = System.Drawing.Color.Gray
-        Me.lblComputerName.Location = New System.Drawing.Point(244, 76)
+        Me.lblComputerName.Location = New System.Drawing.Point(244, 89)
         Me.lblComputerName.Name = "lblComputerName"
         Me.lblComputerName.Size = New System.Drawing.Size(128, 21)
         Me.lblComputerName.TabIndex = 50
@@ -340,7 +342,7 @@ Partial Class frmRemainingTime
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.CompLock.My.Resources.Resources.Computer_teal_48
-        Me.PictureBox3.Location = New System.Drawing.Point(212, 71)
+        Me.PictureBox3.Location = New System.Drawing.Point(216, 84)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(33, 33)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -350,7 +352,7 @@ Partial Class frmRemainingTime
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.CompLock.My.Resources.Resources.User_48px
-        Me.PictureBox2.Location = New System.Drawing.Point(2, 4)
+        Me.PictureBox2.Location = New System.Drawing.Point(2, 11)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(54, 51)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -360,7 +362,7 @@ Partial Class frmRemainingTime
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.CompLock.My.Resources.Resources.clock_teal_48px
-        Me.PictureBox1.Location = New System.Drawing.Point(14, 70)
+        Me.PictureBox1.Location = New System.Drawing.Point(14, 83)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -389,7 +391,7 @@ Partial Class frmRemainingTime
         '
         Me.Panel8.AllowDrop = True
         Me.Panel8.BackColor = System.Drawing.Color.DarkGray
-        Me.Panel8.Location = New System.Drawing.Point(12, 105)
+        Me.Panel8.Location = New System.Drawing.Point(12, 118)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(408, 1)
         Me.Panel8.TabIndex = 8
@@ -399,7 +401,8 @@ Partial Class frmRemainingTime
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(430, 60)
+        Me.ClientSize = New System.Drawing.Size(430, 226)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.lblComputerName)
         Me.Controls.Add(Me.Panel1)
@@ -411,7 +414,6 @@ Partial Class frmRemainingTime
         Me.Controls.Add(Me.btnSettings)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.btnToggleWindow)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel5)
@@ -428,13 +430,13 @@ Partial Class frmRemainingTime
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PictureBox3)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmRemainingTime"
         Me.ShowInTaskbar = False
-        Me.Text = "Anderson Computer Management System"
-        Me.TopMost = True
+        Me.Text = "My portal"
         Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -469,7 +471,6 @@ Partial Class frmRemainingTime
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
-    Friend WithEvents btnToggleWindow As System.Windows.Forms.Button
     Friend WithEvents btnSettings As System.Windows.Forms.Button
     Friend WithEvents Panel7 As System.Windows.Forms.Panel
     Friend WithEvents btnViewHelp As System.Windows.Forms.Button

@@ -1,43 +1,82 @@
 ﻿
 Imports System.Data.OleDb
+Imports Newtonsoft.Json
+Imports System.Net.Http
+Imports CompLock.ResponseOjects
 Public Class frmLogin
     Private AllowWindowToClose As Boolean = False
 
+    ''' <summary>
+    ''' Change the state of the signin button (text and enabled)
+    ''' to show that the app is loading
+    ''' </summary>
+    ''' <param name="show">If true the progress shows, else it does not</param>
+    Sub showProgress(show As Boolean)
+        progSignin.Visible = show
+    End Sub
 
-    Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
-
+    Private Async Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
         If txtUsername.Text = "" Then          'validation: Presence Check
             MsgBox("Please enter your username")
             txtUsername.Focus()
 
-        ElseIf txtPassword.Text = ""           'validation: Presence Check
+        ElseIf txtPassword.Text = "" Then           'validation: Presence Check
             MsgBox("Enter your password")
             txtPassword.Focus()
-        Else 'Presence Check Passed.
-            Dim Student As New Student()
-            Student.Initialize(txtUsername.Text)
-            Try
-                Dim LoginSuccess As Boolean = Student.Login(txtUsername.Text, txtPassword.Text)
-                Select Case LoginSuccess
-                    Case True
-                        If Student.Type.ToLower <> "administrator" Then
-                            Dim StudentForm As New frmRemainingTime(Student)
-                            StudentForm.Show()
-                            AllowWindowToClose = True
-                            Me.Close()
-                        ElseIf Student.Type.ToLower = "administrator"
-                            Dim AdminForm As New frmAdminMainMenu
-                            AdminForm.NameOfAdministrator = Student.FullName()
-                            AdminForm.Show()
-                            AllowWindowToClose = True
-                            Me.Close()
-                        End If
 
-                    Case False
-                        MessageBox.Show("The System could not log you in. You have entered invalid credentials, try again", "Invalid details", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                End Select
+        Else 'Presence Check Passed.
+            showProgress(True)
+
+            Dim pairs As Dictionary(Of String, String) = New Dictionary(Of String, String)()
+            pairs.Add("username", txtUsername.Text)
+            pairs.Add("password", txtPassword.Text)
+
+            Dim formContent As FormUrlEncodedContent = New FormUrlEncodedContent(pairs)
+
+            Try
+
+                Dim http = New HttpClient()
+                http.BaseAddress = New Uri("http://localhost:3000")
+                Dim response = Await http.PostAsync("/auth/login?app=desktop&computer_name=" + Environment.UserName, formContent)
+                Dim json = Await response.Content.ReadAsStringAsync
+
+                Dim Student As New Student()
+                If response.StatusCode = 200 Then
+                    Dim r As Success = JsonConvert.DeserializeObject(Of Success)(json)
+                    With r.user
+                        Student.Blocked = .blocked
+                        Student.FirstName = .f_name
+                        Student.Surname = .s_name
+                        Student.Type = .type
+                        Student.Username = .username
+
+                    End With
+
+                    If Student.Type.ToLower() <> "administrator" Then
+                        With r.user
+                            Student.TotalTimeUsed = .used_time
+                            Student.TimeLimits = .time_limit
+                            Student.RemainingTime = .remaining_time
+                        End With
+                        Dim StudentForm As New frmRemainingTime(Student)
+                        StudentForm.Show()
+                        AllowWindowToClose = True
+                        Me.Close()
+                    Else
+                        Dim AdminForm As New frmAdminMainMenu
+                        AdminForm.NameOfAdministrator = Student.FullName()
+                        AdminForm.Show()
+                        AllowWindowToClose = True
+                        Me.Close()
+                    End If
+                Else
+                    Dim r As Errors = JsonConvert.DeserializeObject(Of Errors)(json)
+                    showProgress(False)
+                    MessageBox.Show(r.message, "Something's not right", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
 
             Catch ex As Exception
+                showProgress(False)
                 MessageBox.Show(ex.Message, "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
 

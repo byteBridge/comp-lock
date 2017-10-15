@@ -1,7 +1,7 @@
 ﻿
 
 Imports Npgsql
-
+Imports System.Net.Http
 
 Public Class Student
 #Region "Fields"
@@ -104,12 +104,47 @@ Public Class Student
         End Set
     End Property
 
+    ''' <summary>
+    ''' The total amount of time the user has used today
+    ''' </summary>
+    ''' <returns></returns>
+    Public Property TotalTimeUsed As String
+
+    ''' <summary>
+    ''' The limits on how much time a student should use as provisioned by the administrator
+    ''' </summary>
+    Public TimeLimits As String
+
+    ''' <summary>
+    ''' The amount of time left before the account is logged out
+    ''' To be used on the initial load of the frmRemainingTime
+    ''' </summary>
+    Public RemainingTime As String
 
 #End Region
 #Region "Methods"
 
+    ''' <summary>
+    ''' Log out the user. Logs the session as well
+    ''' </summary>
+    ''' <param name="StartTime"></param>
+    ''' <param name="Duration"></param>
+    ''' <param name="LogDate"></param>
+    ''' <param name="ComputerName"></param>
+    Friend Async Sub Logout(StartTime As String, Duration As String, LogDate As String, ComputerName As String)
+        Dim pairs As Dictionary(Of String, String) = New Dictionary(Of String, String)()
+        pairs.Add("username", Me.Username)
+        pairs.Add("start_time", StartTime)
+        pairs.Add("computer_name", ComputerName)
+        pairs.Add("log_date", LogDate)
+        pairs.Add("duration", Duration)
 
+        Dim formContent As FormUrlEncodedContent = New FormUrlEncodedContent(pairs)
 
+        Dim http = New HttpClient()
+        http.BaseAddress = New Uri("http://localhost:3000")
+        Dim response = Await http.PostAsync("/auth/logout", formContent)
+    End Sub
 
     ''' <summary>
     ''' Deletes the member completely fom the database. Does'nt delete his or her history
@@ -160,47 +195,6 @@ Public Class Student
 
         'Return the results to the calling code
         Return HasMemberHistoryBeenSuccessfullyDeleted
-    End Function
-
-    ''' <summary>
-    ''' Validates the credentials and checks for other validations eg, time, blacklisted,etc
-    ''' </summary>
-    Public Function Login(ByVal Username As String, ByVal Password As String) As Boolean
-        If (Me.FullName <> String.Empty And Username = Me.Username And Password = Me.Password) Then
-            If Type.ToLower <> "administrator" Then
-                'Has the user been blocked
-                If IsMemberBlocked(Username) = True Then
-                    ' Connections.Connection.Close()
-                    Throw New Exception("We regret to inform you that your account qualifies to be blocked. Report by librarian's desk to have your account unblocked.")
-                    Return False
-
-                Else
-                    'has the user used up his/her time?
-                    If CDate(TimeOperations.GetTotalUpTime(Username)) >= CDate(TimeOperations.GetTimeLimits(Type)) Then
-                        ' Connections.Connection.Close()
-                        Throw New Exception("We regret to inform you that you have used up today's time. May you come back tommorrow for more research.")
-                        Return False
-
-                    Else
-                        'is the user already online on another computer?
-                        If IsOnline(Username) = True Then
-                            Throw New Exception("It looks like your account is already logged in on another computer. Log out on that computer if you wish to use this one.")
-                            Return False
-                        Else
-                            Return True
-                        End If
-                    End If
-                End If
-
-            ElseIf Type.ToLower = "administrator" Then
-                ' Admin with a correct password
-                Return True
-            End If
-        Else
-            Return False
-        End If
-
-        Return False
     End Function
 
 
@@ -282,28 +276,6 @@ Public Class Student
         End Try
         Return ChangeSuccess 'Return the results of the attempt to change the password.
     End Function
-
-    ''' <summary>
-    ''' PROGRAM NAME: LogSession
-    ''' WRITTEN BY: Kudakwashe Paradzayi.
-    ''' PURPOSE: Records the username, log in time, duration and the computer from which the login was made.
-    ''' </summary>
-    Public Sub LogSession(StartTime As String, Duration As String, LogDate As String, ComputerName As String)
-
-
-        Dim Connections As DataConnections 'Initialise and declare variables
-
-        Try 'Handle errors here
-            Connections = New DataConnections()
-            Connections.Connection.Open()
-            Connections.SQLStatement = "INSERT INTO logsession(username,start_time,duration,log_date,comp_name) VALUES ('" & Me.Username & "','" & StartTime & "','" & Duration & "','" & LogDate & "','" & ComputerName & "')"
-            Connections.Command.ExecuteNonQuery()
-            Connections.Connection.Close()
-
-        Catch ex As Exception 'Report an error if found
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-        End Try
-    End Sub
 
     Public Function FillAccounts() As DataTable
         Dim Connections As DataConnections
@@ -475,28 +447,6 @@ Public Class Student
     End Function
 
 
-
-
-    ''' <summary>
-    ''' Determines whether a user has exceeded his daily time limit
-    ''' </summary>
-    ''' <param name="Username"></param>
-    ''' <returns></returns>
-    ''' <remarks></remarks>
-    Public Function UserTimeUp(ByVal Username As String, UserType As String) As Boolean
-        Try
-
-            If CDate(TimeOperations.GetTotalUpTime(Username)) > CDate(TimeOperations.GetTimeLimits(UserType)) = True Then
-                Return True
-            Else
-                Return False
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-        End Try
-        Return False
-    End Function
-
     ''' <summary>
     ''' Checks wheter a member is blocked or not
     ''' </summary>
@@ -593,62 +543,6 @@ Public Class Student
         End Try
         Return False
 
-    End Function
-
-    ''' <summary>
-    ''' Sets the database to reflect that the user is online
-    ''' </summary>
-    Public Sub GoOnline()
-        Dim Connections As DataConnections
-        Dim i As Integer = 0
-        Try
-            Connections = New DataConnections()
-            Connections.Connection.Open()
-            Connections.SQLStatement = "INSERT  INTO online(username,login_time) VALUES('" & Me.Username & "','" & DateAndTime.Now.ToString("HH:mm:ss") & "') " '" '"
-            Connections.Command.ExecuteNonQuery()
-            Connections.Connection.Close()
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-        End Try
-    End Sub
-
-    Public Sub GoOffline()
-        Dim Connections As DataConnections
-        Dim i As Integer = 0
-        Try
-            Connections = New DataConnections()
-            Connections.Connection.Open()
-            Connections.SQLStatement = "DELETE FROM online where  username ='" & Me.Username & "'" '"
-            Connections.Command.ExecuteNonQuery()
-
-            Connections.Connection.Close()
-
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-        End Try
-
-    End Sub
-    Public Function IsOnline(username As String) As Boolean
-        Dim Connections As DataConnections
-        Dim i As Integer = 0
-        Try
-            Connections = New DataConnections()
-            Connections.Connection.Open()
-            Connections.SQLStatement = "SELECT username FROM online where username ='" & username & "'" '"
-            Connections.DataReader = Connections.Command.ExecuteReader()
-            While Connections.DataReader.Read()
-                i += 1
-            End While
-            Connections.Connection.Close()
-            If i = 0 Then
-                Return False
-            ElseIf i > 0
-                Return True
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-        End Try
-        Return False
     End Function
 
     Function ChangeAccountType(Username As String, AccountType As String) As Boolean

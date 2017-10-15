@@ -1,5 +1,5 @@
 ﻿Imports CompLock
-
+Imports System.Net.Http
 Public Class frmRemainingTime
     Private Student As Student
     Private AllowWindowToClose As Boolean = False
@@ -16,8 +16,6 @@ Public Class frmRemainingTime
     'these variables keep track of the count downn
     Private Hours, Minutes, Seconds As Integer
 
-    Private ToggleWindow As Boolean = False 'keeps the state of the window
-
     Public Sub New(student As Student)
         'initialize the form first
         InitializeComponent()
@@ -28,8 +26,8 @@ Public Class frmRemainingTime
         lblHelloStudentName.Text = student.FullName()
 
         'Get the values of the Total time used by the student and the time limit from the database
-        TotalTimeUsed = TimeOperations.GetTotalUpTime(student.Username)
-        TimeLimits = TimeOperations.GetTimeLimits(student.Type)
+        TotalTimeUsed = student.TotalTimeUsed 'TimeOperations.GetTotalUpTime(student.Username)
+        TimeLimits = student.TimeLimits 'TimeOperations.GetTimeLimits(student.Type)
 
         'Calculate the amount of time used by the student by determining the differrence between the total time used and the time limits set by the administrator
         TimeSpanDuration = TimeLimits - TotalTimeUsed
@@ -43,7 +41,6 @@ Public Class frmRemainingTime
         lblComputerName.Text = Environment.UserName
         'Start the timer so that count down begins
         tmrStudentSession.Start()
-        student.GoOnline()
     End Sub
 
     Private Sub btnSignOut_Click(sender As Object, e As EventArgs) Handles btnSignOut.Click
@@ -57,16 +54,13 @@ Public Class frmRemainingTime
 
     Private Sub frmRemainingTime_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If AllowWindowToClose = True Then
-            Student.GoOffline()
-            Student.LogSession(StartTime, Duration.ToString("HH:mm:ss"), TodayDate, Environment.UserName)
-
+            Student.Logout(StartTime, Duration.ToString("HH:mm:ss"), TodayDate, Environment.UserName)
             'close the notification window if it is open
             frmNotification.Close()
         Else
             'record the entries of today's log session even when the computer is being shutdown or the app is being closed remotely
             If e.CloseReason <> CloseReason.UserClosing Then
-                Student.GoOffline()
-                Student.LogSession(StartTime, Duration.ToString("HH:mm:ss"), TodayDate, Environment.UserName)
+                Student.Logout(StartTime, Duration.ToString("HH:mm:ss"), TodayDate, Environment.UserName)
 
                 'close the notification window if it is open
                 frmNotification.Close()
@@ -99,7 +93,7 @@ Public Class frmRemainingTime
         ' NotifyIcon1.ShowBalloonTip(0)
         Dim Rect As New Rectangle
         Rect = Screen.GetWorkingArea(New Point(0, 0))
-        Me.Location = New Point(20, Rect.Height - 100)
+        Me.Location = New Point(10, Rect.Height - 250)
 
 
     End Sub
@@ -107,28 +101,6 @@ Public Class frmRemainingTime
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         NotifyIcon1.ShowBalloonTip(2000)
         NotifyIcon1.Visible = True
-    End Sub
-
-    Private Sub btnToggleWindow_Click(sender As Object, e As EventArgs) Handles btnToggleWindow.Click
-
-        Select Case ToggleWindow
-            Case False
-                btnToggleWindow.Image = My.Resources.UpArrow_01_teal
-
-                MoveWindow(-155)
-                Me.Size = New Size(430, 215) 'expand the window
-                ToggleWindow = True
-
-            Case True
-                btnToggleWindow.Image = My.Resources.Arrowhead_down_teal
-
-                MoveWindow(155)
-                Me.Size = New Size(430, 60) 'Collapse the window
-                ToggleWindow = False
-        End Select
-
-        'whether the notification is shown or not, upadate the new location of the nofification.
-        frmNotification.Location = New Point(Me.Location.X, Me.Location.Y - 100)
     End Sub
 
     ''' <summary>
@@ -145,8 +117,11 @@ Public Class frmRemainingTime
     End Sub
 
     Private Sub btnSettings_Click(sender As Object, e As EventArgs) Handles btnSettings.Click
-        Dim MyAccount As New frmMyAccount(Student, frmMyAccount.AccessLevel.Student)
-        MyAccount.ShowDialog()
+        Try
+            Process.Start("http://localhost:3000/#users/" + Student.Username)
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     ''' <summary>
@@ -168,7 +143,7 @@ Public Class frmRemainingTime
 
     Private Sub btnViewHelp_Click(sender As Object, e As EventArgs) Handles btnViewHelp.Click
         Try
-            Process.Start("Help\faqs.html")
+            Process.Start("http://localhost:3000/#help")
         Catch ex As Exception
 
         End Try
