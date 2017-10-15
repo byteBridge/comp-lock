@@ -118,7 +118,7 @@ Public Class frmRemainingTime
 
     Private Sub btnSettings_Click(sender As Object, e As EventArgs) Handles btnSettings.Click
         Try
-            Process.Start("http://localhost:3000/#students/" + Student.Username)
+            Process.Start("http://localhost:3000/#users/" + Student.Username)
         Catch ex As Exception
 
         End Try
