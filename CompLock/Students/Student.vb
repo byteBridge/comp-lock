@@ -447,28 +447,6 @@ Public Class Student
     End Function
 
 
-
-
-    ''' <summary>
-    ''' Determines whether a user has exceeded his daily time limit
-    ''' </summary>
-    ''' <param name="Username"></param>
-    ''' <returns></returns>
-    ''' <remarks></remarks>
-    Public Function UserTimeUp(ByVal Username As String, UserType As String) As Boolean
-        Try
-
-            If CDate(TimeOperations.GetTotalUpTime(Username)) > CDate(TimeOperations.GetTimeLimits(UserType)) = True Then
-                Return True
-            Else
-                Return False
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-        End Try
-        Return False
-    End Function
-
     ''' <summary>
     ''' Checks wheter a member is blocked or not
     ''' </summary>
