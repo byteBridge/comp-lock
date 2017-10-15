@@ -197,47 +197,6 @@ Public Class Student
         Return HasMemberHistoryBeenSuccessfullyDeleted
     End Function
 
-    ''' <summary>
-    ''' Validates the credentials and checks for other validations eg, time, blacklisted,etc
-    ''' </summary>
-    Public Function Login(ByVal Username As String, ByVal Password As String) As Boolean
-        If (Me.FullName <> String.Empty And Username = Me.Username And Password = Me.Password) Then
-            If Type.ToLower <> "administrator" Then
-                'Has the user been blocked
-                If IsMemberBlocked(Username) = True Then
-                    ' Connections.Connection.Close()
-                    Throw New Exception("We regret to inform you that your account qualifies to be blocked. Report by librarian's desk to have your account unblocked.")
-                    Return False
-
-                Else
-                    'has the user used up his/her time?
-                    If CDate(TimeOperations.GetTotalUpTime(Username)) >= CDate(TimeOperations.GetTimeLimits(Type)) Then
-                        ' Connections.Connection.Close()
-                        Throw New Exception("We regret to inform you that you have used up today's time. May you come back tommorrow for more research.")
-                        Return False
-
-                    Else
-                        'is the user already online on another computer?
-                        If IsOnline(Username) = True Then
-                            Throw New Exception("It looks like your account is already logged in on another computer. Log out on that computer if you wish to use this one.")
-                            Return False
-                        Else
-                            Return True
-                        End If
-                    End If
-                End If
-
-            ElseIf Type.ToLower = "administrator" Then
-                ' Admin with a correct password
-                Return True
-            End If
-        Else
-            Return False
-        End If
-
-        Return False
-    End Function
-
 
     ''' <summary>
     ''' Formats the username into the accepted format, and checks if the username is valid
