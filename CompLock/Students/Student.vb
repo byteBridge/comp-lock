@@ -545,62 +545,6 @@ Public Class Student
 
     End Function
 
-    ''' <summary>
-    ''' Sets the database to reflect that the user is online
-    ''' </summary>
-    Public Sub GoOnline()
-        Dim Connections As DataConnections
-        Dim i As Integer = 0
-        Try
-            Connections = New DataConnections()
-            Connections.Connection.Open()
-            Connections.SQLStatement = "INSERT  INTO online(username,login_time) VALUES('" & Me.Username & "','" & DateAndTime.Now.ToString("HH:mm:ss") & "') " '" '"
-            Connections.Command.ExecuteNonQuery()
-            Connections.Connection.Close()
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-        End Try
-    End Sub
-
-    Public Sub GoOffline()
-        Dim Connections As DataConnections
-        Dim i As Integer = 0
-        Try
-            Connections = New DataConnections()
-            Connections.Connection.Open()
-            Connections.SQLStatement = "DELETE FROM online where  username ='" & Me.Username & "'" '"
-            Connections.Command.ExecuteNonQuery()
-
-            Connections.Connection.Close()
-
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-        End Try
-
-    End Sub
-    Public Function IsOnline(username As String) As Boolean
-        Dim Connections As DataConnections
-        Dim i As Integer = 0
-        Try
-            Connections = New DataConnections()
-            Connections.Connection.Open()
-            Connections.SQLStatement = "SELECT username FROM online where username ='" & username & "'" '"
-            Connections.DataReader = Connections.Command.ExecuteReader()
-            While Connections.DataReader.Read()
-                i += 1
-            End While
-            Connections.Connection.Close()
-            If i = 0 Then
-                Return False
-            ElseIf i > 0
-                Return True
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-        End Try
-        Return False
-    End Function
-
     Function ChangeAccountType(Username As String, AccountType As String) As Boolean
         Dim Connections As DataConnections
         Try
