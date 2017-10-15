@@ -277,28 +277,6 @@ Public Class Student
         Return ChangeSuccess 'Return the results of the attempt to change the password.
     End Function
 
-    ''' <summary>
-    ''' PROGRAM NAME: LogSession
-    ''' WRITTEN BY: Kudakwashe Paradzayi.
-    ''' PURPOSE: Records the username, log in time, duration and the computer from which the login was made.
-    ''' </summary>
-    Public Sub LogSession(StartTime As String, Duration As String, LogDate As String, ComputerName As String)
-
-
-        Dim Connections As DataConnections 'Initialise and declare variables
-
-        Try 'Handle errors here
-            Connections = New DataConnections()
-            Connections.Connection.Open()
-            Connections.SQLStatement = "INSERT INTO logsession(username,start_time,duration,log_date,comp_name) VALUES ('" & Me.Username & "','" & StartTime & "','" & Duration & "','" & LogDate & "','" & ComputerName & "')"
-            Connections.Command.ExecuteNonQuery()
-            Connections.Connection.Close()
-
-        Catch ex As Exception 'Report an error if found
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-        End Try
-    End Sub
-
     Public Function FillAccounts() As DataTable
         Dim Connections As DataConnections
         Dim ds As DataSet
