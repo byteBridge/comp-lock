@@ -144,7 +144,6 @@ Public Class Student
         Dim http = New HttpClient()
         http.BaseAddress = New Uri("http://localhost:3000")
         Dim response = Await http.PostAsync("/auth/logout", formContent)
-        MsgBox(Await response.Content.ReadAsStringAsync)
     End Sub
 
     ''' <summary>
