@@ -150,4 +150,14 @@
     Private Sub cboAccountType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboAccountType.SelectedIndexChanged
         txtTimeLimits.Text = TimeOperations.GetTimeLimits(cboAccountType.SelectedItem)
     End Sub
+
+    Private Sub btnSetServerPath_Click(sender As Object, e As EventArgs) Handles btnSetServerPath.Click
+        If (txtServerName.Text.Length > 3 And txtServerPort.Text.Length = 4) Then
+            My.Settings.ApiServerURL = "http://" & txtServerName.Text
+            My.Settings.ApiServerPort = txtServerPort.Text
+            MsgBox("success")
+        Else
+            MsgBox("Fill in correctly")
+        End If
+    End Sub
 End Class

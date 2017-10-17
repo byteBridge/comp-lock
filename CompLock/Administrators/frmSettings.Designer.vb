@@ -61,11 +61,22 @@ Partial Class frmSettings
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.btnSetServerPath = New System.Windows.Forms.Button()
+        Me.txtServerPort = New System.Windows.Forms.TextBox()
+        Me.txtServerName = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Settings
@@ -98,7 +109,7 @@ Partial Class frmSettings
         Me.GroupBox2.Controls.Add(Me.cboHours)
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!)
         Me.GroupBox2.ForeColor = System.Drawing.Color.DarkCyan
-        Me.GroupBox2.Location = New System.Drawing.Point(22, 84)
+        Me.GroupBox2.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(302, 206)
         Me.GroupBox2.TabIndex = 14
@@ -189,7 +200,7 @@ Partial Class frmSettings
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!)
         Me.GroupBox1.ForeColor = System.Drawing.Color.DarkCyan
-        Me.GroupBox1.Location = New System.Drawing.Point(22, 421)
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 343)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(302, 138)
         Me.GroupBox1.TabIndex = 15
@@ -245,7 +256,7 @@ Partial Class frmSettings
         Me.GroupBox3.Controls.Add(Me.cboAdministratorAccounts)
         Me.GroupBox3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!)
         Me.GroupBox3.ForeColor = System.Drawing.Color.DarkCyan
-        Me.GroupBox3.Location = New System.Drawing.Point(382, 81)
+        Me.GroupBox3.Location = New System.Drawing.Point(366, 3)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(331, 478)
         Me.GroupBox3.TabIndex = 15
@@ -340,7 +351,7 @@ Partial Class frmSettings
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(311, 57)
         Me.Label9.TabIndex = 14
-        Me.Label9.Text = "Set the emergency exit password to safely close" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " the application when it failes " & _
+        Me.Label9.Text = "Set the emergency exit password to safely close" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " the application when it failes " &
     "to connect to the " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "database."
         '
         'Label8
@@ -492,7 +503,7 @@ Partial Class frmSettings
         Me.GroupBox4.Controls.Add(Me.CheckBox1)
         Me.GroupBox4.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!)
         Me.GroupBox4.ForeColor = System.Drawing.Color.DarkCyan
-        Me.GroupBox4.Location = New System.Drawing.Point(22, 314)
+        Me.GroupBox4.Location = New System.Drawing.Point(6, 236)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(302, 93)
         Me.GroupBox4.TabIndex = 16
@@ -526,20 +537,111 @@ Partial Class frmSettings
         Me.CheckBox1.Text = "Always run the program when windows " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "loads."
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Location = New System.Drawing.Point(8, 68)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(732, 508)
+        Me.TabControl1.TabIndex = 71
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.GroupBox2)
+        Me.TabPage1.Controls.Add(Me.GroupBox4)
+        Me.TabPage1.Controls.Add(Me.GroupBox1)
+        Me.TabPage1.Controls.Add(Me.GroupBox3)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(724, 482)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "TabPage1"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.Label12)
+        Me.TabPage2.Controls.Add(Me.Label4)
+        Me.TabPage2.Controls.Add(Me.btnSetServerPath)
+        Me.TabPage2.Controls.Add(Me.txtServerPort)
+        Me.TabPage2.Controls.Add(Me.txtServerName)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(724, 482)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "TabPage2"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'btnSetServerPath
+        '
+        Me.btnSetServerPath.BackColor = System.Drawing.Color.DarkCyan
+        Me.btnSetServerPath.FlatAppearance.BorderSize = 0
+        Me.btnSetServerPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSetServerPath.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
+        Me.btnSetServerPath.ForeColor = System.Drawing.Color.White
+        Me.btnSetServerPath.Location = New System.Drawing.Point(90, 132)
+        Me.btnSetServerPath.Name = "btnSetServerPath"
+        Me.btnSetServerPath.Size = New System.Drawing.Size(283, 34)
+        Me.btnSetServerPath.TabIndex = 22
+        Me.btnSetServerPath.Text = "Set server path"
+        Me.btnSetServerPath.UseVisualStyleBackColor = False
+        '
+        'txtServerPort
+        '
+        Me.txtServerPort.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
+        Me.txtServerPort.Location = New System.Drawing.Point(319, 80)
+        Me.txtServerPort.MaxLength = 4
+        Me.txtServerPort.Name = "txtServerPort"
+        Me.txtServerPort.Size = New System.Drawing.Size(54, 25)
+        Me.txtServerPort.TabIndex = 24
+        Me.txtServerPort.UseSystemPasswordChar = True
+        '
+        'txtServerName
+        '
+        Me.txtServerName.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
+        Me.txtServerName.Location = New System.Drawing.Point(90, 80)
+        Me.txtServerName.Name = "txtServerName"
+        Me.txtServerName.Size = New System.Drawing.Size(188, 25)
+        Me.txtServerName.TabIndex = 23
+        Me.txtServerName.UseSystemPasswordChar = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(86, 49)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(192, 19)
+        Me.Label4.TabIndex = 25
+        Me.Label4.Text = "Computer name of the server"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
+        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label12.Location = New System.Drawing.Point(315, 49)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(35, 19)
+        Me.Label12.TabIndex = 26
+        Me.Label12.Text = "Port"
+        '
         'frmSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(743, 588)
-        Me.Controls.Add(Me.GroupBox4)
+        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel6)
-        Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel5)
-        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Panel7)
         Me.Name = "frmSettings"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
@@ -554,6 +656,10 @@ Partial Class frmSettings
         Me.Panel7.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -596,4 +702,12 @@ Partial Class frmSettings
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents txtTimeLimits As System.Windows.Forms.TextBox
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents btnSetServerPath As Button
+    Friend WithEvents txtServerPort As TextBox
+    Friend WithEvents txtServerName As TextBox
 End Class
