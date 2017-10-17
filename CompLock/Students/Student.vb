@@ -142,7 +142,7 @@ Public Class Student
         Dim formContent As FormUrlEncodedContent = New FormUrlEncodedContent(pairs)
 
         Dim http = New HttpClient()
-        http.BaseAddress = New Uri("http://localhost:3000")
+        http.BaseAddress = New Uri(My.Settings.ApiServerURL & ":" & My.Settings.ApiServerPort)
         Dim response = Await http.PostAsync("/auth/logout", formContent)
     End Sub
 
