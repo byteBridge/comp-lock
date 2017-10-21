@@ -17,5 +17,14 @@
     <Setting Name="Server" Type="System.String" Scope="User">
       <Value Profile="(Default)">localhost</Value>
     </Setting>
+    <Setting Name="ApiServerURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://doc-pc</Value>
+    </Setting>
+    <Setting Name="ApiServerPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3000</Value>
+    </Setting>
+    <Setting Name="DeveloperPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">comp-lock-web-api-ui</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

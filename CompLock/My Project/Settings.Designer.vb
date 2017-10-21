@@ -113,6 +113,42 @@ Namespace My
                 Me("Server") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://doc-pc")>  _
+        Public Property ApiServerURL() As String
+            Get
+                Return CType(Me("ApiServerURL"),String)
+            End Get
+            Set
+                Me("ApiServerURL") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("3000")>  _
+        Public Property ApiServerPort() As String
+            Get
+                Return CType(Me("ApiServerPort"),String)
+            End Get
+            Set
+                Me("ApiServerPort") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("comp-lock-web-api-ui")>  _
+        Public Property DeveloperPassword() As String
+            Get
+                Return CType(Me("DeveloperPassword"),String)
+            End Get
+            Set
+                Me("DeveloperPassword") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

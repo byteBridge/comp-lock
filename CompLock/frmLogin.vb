@@ -36,7 +36,7 @@ Public Class frmLogin
             Try
 
                 Dim http = New HttpClient()
-                http.BaseAddress = New Uri("http://localhost:3000")
+                http.BaseAddress = New Uri(My.Settings.ApiServerURL & ":" & My.Settings.ApiServerPort)
                 Dim response = Await http.PostAsync("/auth/login?app=desktop&computer_name=" + Environment.UserName, formContent)
                 Dim json = Await response.Content.ReadAsStringAsync
 

@@ -29,12 +29,14 @@ Partial Class frmAdminMainMenu
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnOpenAdminConsole = New System.Windows.Forms.Button()
+        Me.btnOpenSettings = New System.Windows.Forms.Button()
         Me.panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'panel1
         '
         Me.panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(162, Byte), Integer))
+        Me.panel1.Controls.Add(Me.btnOpenSettings)
         Me.panel1.Controls.Add(Me.lblName)
         Me.panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.panel1.Location = New System.Drawing.Point(0, 0)
@@ -97,6 +99,23 @@ Partial Class frmAdminMainMenu
         Me.btnOpenAdminConsole.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnOpenAdminConsole.UseVisualStyleBackColor = False
         '
+        'btnOpenSettings
+        '
+        Me.btnOpenSettings.BackColor = System.Drawing.Color.Transparent
+        Me.btnOpenSettings.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnOpenSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOpenSettings.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.btnOpenSettings.ForeColor = System.Drawing.Color.White
+        Me.btnOpenSettings.Image = Global.CompLock.My.Resources.Resources.Settings_48px
+        Me.btnOpenSettings.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnOpenSettings.Location = New System.Drawing.Point(510, 19)
+        Me.btnOpenSettings.Name = "btnOpenSettings"
+        Me.btnOpenSettings.Size = New System.Drawing.Size(205, 54)
+        Me.btnOpenSettings.TabIndex = 16
+        Me.btnOpenSettings.Text = "Application Settings"
+        Me.btnOpenSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnOpenSettings.UseVisualStyleBackColor = False
+        '
         'frmAdminMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -123,4 +142,5 @@ Partial Class frmAdminMainMenu
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents btnOpenAdminConsole As Button
+    Friend WithEvents btnOpenSettings As Button
 End Class

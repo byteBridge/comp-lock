@@ -394,6 +394,8 @@
     <None Include="Resources\America-Flag-PNG-Clipart.png" />
     <None Include="Resources\Password.png" />
     <None Include="Resources\OpenWebPage-128px.png" />
+    <None Include="Resources\Settings-48px.png" />
+    <None Include="Resources\unlock-32px.png" />
     <Content Include="Webpage locked-WF.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

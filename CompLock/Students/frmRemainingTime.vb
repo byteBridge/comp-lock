@@ -118,7 +118,8 @@ Public Class frmRemainingTime
 
     Private Sub btnSettings_Click(sender As Object, e As EventArgs) Handles btnSettings.Click
         Try
-            Process.Start("http://localhost:3000/#users/" + Student.Username)
+            Dim ApiUrlAndPort As String = My.Settings.ApiServerURL & ":" & My.Settings.ApiServerPort
+            Process.Start(ApiUrlAndPort & "/#users/" + Student.Username)
         Catch ex As Exception
 
         End Try
@@ -143,7 +144,8 @@ Public Class frmRemainingTime
 
     Private Sub btnViewHelp_Click(sender As Object, e As EventArgs) Handles btnViewHelp.Click
         Try
-            Process.Start("http://localhost:3000/#help")
+            Dim ApiUrlAndPort As String = My.Settings.ApiServerURL & ":" & My.Settings.ApiServerPort
+            Process.Start(ApiUrlAndPort & "/#help")
         Catch ex As Exception
 
         End Try
