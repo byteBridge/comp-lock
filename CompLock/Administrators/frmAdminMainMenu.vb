@@ -52,7 +52,8 @@
 
     Private Sub btnOpenAdminConsole_Click(sender As Object, e As EventArgs) Handles btnOpenAdminConsole.Click
         Try
-            Process.Start("http://localhost:3000/#/admin")
+            Dim ApiUrlAndPort As String = My.Settings.ApiServerURL & ":" & My.Settings.ApiServerPort
+            Process.Start(ApiUrlAndPort & "/#/admin")
         Catch ex As Exception
 
         End Try
