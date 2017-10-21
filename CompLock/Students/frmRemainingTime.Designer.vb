@@ -23,6 +23,7 @@ Partial Class frmRemainingTime
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmRemainingTime))
         Me.lblHelloStudentName = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -38,6 +39,7 @@ Partial Class frmRemainingTime
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnSettings = New System.Windows.Forms.Button()
         Me.btnSignOut = New System.Windows.Forms.Button()
+        Me.btnViewHelp = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -50,7 +52,6 @@ Partial Class frmRemainingTime
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblComputerName = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.btnViewHelp = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnViewMyAccount = New System.Windows.Forms.Button()
@@ -216,6 +217,22 @@ Partial Class frmRemainingTime
         Me.ToolTip1.SetToolTip(Me.btnSignOut, "Sign out")
         Me.btnSignOut.UseVisualStyleBackColor = False
         '
+        'btnViewHelp
+        '
+        Me.btnViewHelp.BackColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(162, Byte), Integer))
+        Me.btnViewHelp.FlatAppearance.BorderSize = 0
+        Me.btnViewHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnViewHelp.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.btnViewHelp.ForeColor = System.Drawing.Color.White
+        Me.btnViewHelp.Image = Global.CompLock.My.Resources.Resources.Help_teal
+        Me.btnViewHelp.Location = New System.Drawing.Point(276, 8)
+        Me.btnViewHelp.Name = "btnViewHelp"
+        Me.btnViewHelp.Size = New System.Drawing.Size(57, 29)
+        Me.btnViewHelp.TabIndex = 49
+        Me.btnViewHelp.Text = "Help"
+        Me.ToolTip1.SetToolTip(Me.btnViewHelp, "View Help")
+        Me.btnViewHelp.UseVisualStyleBackColor = False
+        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.DarkCyan
@@ -332,22 +349,6 @@ Partial Class frmRemainingTime
         Me.Panel8.Size = New System.Drawing.Size(408, 1)
         Me.Panel8.TabIndex = 8
         '
-        'btnViewHelp
-        '
-        Me.btnViewHelp.BackColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(162, Byte), Integer))
-        Me.btnViewHelp.FlatAppearance.BorderSize = 0
-        Me.btnViewHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnViewHelp.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.btnViewHelp.ForeColor = System.Drawing.Color.White
-        Me.btnViewHelp.Image = Global.CompLock.My.Resources.Resources.Help_teal
-        Me.btnViewHelp.Location = New System.Drawing.Point(276, 8)
-        Me.btnViewHelp.Name = "btnViewHelp"
-        Me.btnViewHelp.Size = New System.Drawing.Size(57, 29)
-        Me.btnViewHelp.TabIndex = 49
-        Me.btnViewHelp.Text = "Help"
-        Me.ToolTip1.SetToolTip(Me.btnViewHelp, "View Help")
-        Me.btnViewHelp.UseVisualStyleBackColor = False
-        '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.CompLock.My.Resources.Resources.User_48px
@@ -432,10 +433,10 @@ Partial Class frmRemainingTime
         Me.Controls.Add(Me.PictureBox3)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmRemainingTime"
-        Me.ShowInTaskbar = False
         Me.Text = "My portal"
         Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
