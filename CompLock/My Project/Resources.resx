@@ -124,9 +124,6 @@
   <data name="UserInfo_bk-teal_128px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UserInfo_bk-teal_128px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ultimate-material-lollipop-collection-2681" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ultimate-material-lollipop-collection-2681.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="logo-color" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo-color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,6 +142,9 @@
   <data name="Adobe-PDF-Export_teal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Adobe-PDF-Export_teal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ShutDown_orangered_128px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ShutDown_orangered_128px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Preview_teal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Preview_teal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,6 +156,9 @@
   </data>
   <data name="Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="America-Flag-PNG-Clipart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\America-Flag-PNG-Clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ArrowHeadRight_white1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ArrowHeadRight_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -177,6 +180,9 @@
   </data>
   <data name="Preview_teal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Preview_teal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Computer_teal_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Computer_teal_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="admin_color" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin_color.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,11 +238,8 @@
   <data name="notification_orange1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\notification_orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Computer_teal_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Computer_teal_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="admin_color1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\admin_color.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ultimate-material-lollipop-collection-2681" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ultimate-material-lollipop-collection-2681.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Arrowhead down-teal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Arrowhead down-teal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,10 +253,10 @@
   <data name="UserFind_bk-teal_128px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UserFind_bk-teal_128px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ShutDown_orangered_128px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ShutDown_orangered_128px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="admin_color1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\admin_color.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="America-Flag-PNG-Clipart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\America-Flag-PNG-Clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Password" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

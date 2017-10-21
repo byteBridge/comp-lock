@@ -25,7 +25,6 @@ Partial Class frmAdminMainMenu
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAdminMainMenu))
         Me.panel1 = New System.Windows.Forms.Panel()
         Me.btnMinimise = New System.Windows.Forms.Button()
-        Me.btnSignOut = New System.Windows.Forms.Button()
         Me.lblName = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -36,12 +35,13 @@ Partial Class frmAdminMainMenu
         Me.Button3 = New System.Windows.Forms.Button()
         Me.btnViewAccounts = New System.Windows.Forms.Button()
         Me.btnCreateAccount = New System.Windows.Forms.Button()
+        Me.btnSignOut = New System.Windows.Forms.Button()
         Me.panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'panel1
         '
-        Me.panel1.BackColor = System.Drawing.Color.DarkCyan
+        Me.panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(162, Byte), Integer))
         Me.panel1.Controls.Add(Me.btnMinimise)
         Me.panel1.Controls.Add(Me.btnSignOut)
         Me.panel1.Controls.Add(Me.lblName)
@@ -66,23 +66,6 @@ Partial Class frmAdminMainMenu
         Me.btnMinimise.Text = "Minimize"
         Me.btnMinimise.UseVisualStyleBackColor = False
         '
-        'btnSignOut
-        '
-        Me.btnSignOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSignOut.BackColor = System.Drawing.Color.OrangeRed
-        Me.btnSignOut.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan
-        Me.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSignOut.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.btnSignOut.ForeColor = System.Drawing.Color.White
-        Me.btnSignOut.Image = Global.CompLock.My.Resources.Resources.signout_white_48px
-        Me.btnSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSignOut.Location = New System.Drawing.Point(550, 31)
-        Me.btnSignOut.Name = "btnSignOut"
-        Me.btnSignOut.Size = New System.Drawing.Size(161, 46)
-        Me.btnSignOut.TabIndex = 7
-        Me.btnSignOut.Text = "Sign Out"
-        Me.btnSignOut.UseVisualStyleBackColor = False
-        '
         'lblName
         '
         Me.lblName.AutoSize = True
@@ -97,7 +80,7 @@ Partial Class frmAdminMainMenu
         'Panel2
         '
         Me.Panel2.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.BackColor = System.Drawing.Color.DarkCyan
+        Me.Panel2.BackColor = System.Drawing.Color.DarkViolet
         Me.Panel2.Location = New System.Drawing.Point(19, 174)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(692, 1)
@@ -105,7 +88,7 @@ Partial Class frmAdminMainMenu
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.DarkCyan
+        Me.Panel3.BackColor = System.Drawing.Color.DarkViolet
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel3.Location = New System.Drawing.Point(725, 100)
         Me.Panel3.Name = "Panel3"
@@ -114,7 +97,7 @@ Partial Class frmAdminMainMenu
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.DarkCyan
+        Me.Panel4.BackColor = System.Drawing.Color.DarkViolet
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel4.Location = New System.Drawing.Point(2, 547)
         Me.Panel4.Name = "Panel4"
@@ -123,7 +106,7 @@ Partial Class frmAdminMainMenu
         '
         'Panel5
         '
-        Me.Panel5.BackColor = System.Drawing.Color.DarkCyan
+        Me.Panel5.BackColor = System.Drawing.Color.DarkViolet
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel5.Location = New System.Drawing.Point(0, 100)
         Me.Panel5.Name = "Panel5"
@@ -219,6 +202,23 @@ Partial Class frmAdminMainMenu
         Me.btnCreateAccount.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnCreateAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnCreateAccount.UseVisualStyleBackColor = False
+        '
+        'btnSignOut
+        '
+        Me.btnSignOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSignOut.BackColor = System.Drawing.Color.OrangeRed
+        Me.btnSignOut.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan
+        Me.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSignOut.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.btnSignOut.ForeColor = System.Drawing.Color.White
+        Me.btnSignOut.Image = Global.CompLock.My.Resources.Resources.signout_white_48px
+        Me.btnSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSignOut.Location = New System.Drawing.Point(550, 31)
+        Me.btnSignOut.Name = "btnSignOut"
+        Me.btnSignOut.Size = New System.Drawing.Size(161, 46)
+        Me.btnSignOut.TabIndex = 7
+        Me.btnSignOut.Text = "Sign Out"
+        Me.btnSignOut.UseVisualStyleBackColor = False
         '
         'frmAdminMainMenu
         '

@@ -142,7 +142,7 @@ Partial Class frmNotification
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmNotification"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmNotification"
+        Me.Text = "TIME IS RUNNING OUT. SAVE YOUR WORK."
         Me.TopMost = True
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

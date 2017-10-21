@@ -392,6 +392,7 @@
     <None Include="Resources\logo-color.png" />
     <None Include="Resources\America-Flag-PNG-HD-180x180.png" />
     <None Include="Resources\America-Flag-PNG-Clipart.png" />
+    <None Include="Resources\Password.png" />
     <Content Include="Webpage locked-WF.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

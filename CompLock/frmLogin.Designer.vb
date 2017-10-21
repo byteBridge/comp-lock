@@ -22,7 +22,6 @@ Partial Class frmLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtPassword = New System.Windows.Forms.TextBox()
@@ -31,15 +30,15 @@ Partial Class frmLogin
         Me.label4 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnSignIn = New System.Windows.Forms.Button()
-        Me.pictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.pictureBox3 = New System.Windows.Forms.PictureBox()
         Me.mnuOptions = New System.Windows.Forms.MenuStrip()
         Me.tlstrpEmergencyExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.tlstrpHelp = New System.Windows.Forms.ToolStripMenuItem()
         Me.progSignin = New System.Windows.Forms.ProgressBar()
+        Me.pictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.pictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.mnuOptions.SuspendLayout()
         CType(Me.pictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.mnuOptions.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label2
@@ -84,7 +83,7 @@ Partial Class frmLogin
         '
         Me.label3.AutoSize = True
         Me.label3.Font = New System.Drawing.Font("Segoe UI Light", 20.0!)
-        Me.label3.ForeColor = System.Drawing.Color.DarkCyan
+        Me.label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(162, Byte), Integer))
         Me.label3.Location = New System.Drawing.Point(344, 203)
         Me.label3.Name = "label3"
         Me.label3.Size = New System.Drawing.Size(92, 37)
@@ -116,7 +115,7 @@ Partial Class frmLogin
         '
         'btnSignIn
         '
-        Me.btnSignIn.BackColor = System.Drawing.Color.DarkCyan
+        Me.btnSignIn.BackColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(162, Byte), Integer))
         Me.btnSignIn.FlatAppearance.BorderSize = 0
         Me.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSignIn.Font = New System.Drawing.Font("Segoe UI", 12.0!)
@@ -128,26 +127,6 @@ Partial Class frmLogin
         Me.btnSignIn.TabIndex = 2
         Me.btnSignIn.Text = "Sign in"
         Me.btnSignIn.UseVisualStyleBackColor = False
-        '
-        'pictureBox4
-        '
-        Me.pictureBox4.Image = CType(resources.GetObject("pictureBox4.Image"), System.Drawing.Image)
-        Me.pictureBox4.Location = New System.Drawing.Point(342, 364)
-        Me.pictureBox4.Name = "pictureBox4"
-        Me.pictureBox4.Size = New System.Drawing.Size(39, 35)
-        Me.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pictureBox4.TabIndex = 9
-        Me.pictureBox4.TabStop = False
-        '
-        'pictureBox3
-        '
-        Me.pictureBox3.Image = CType(resources.GetObject("pictureBox3.Image"), System.Drawing.Image)
-        Me.pictureBox3.Location = New System.Drawing.Point(342, 290)
-        Me.pictureBox3.Name = "pictureBox3"
-        Me.pictureBox3.Size = New System.Drawing.Size(39, 35)
-        Me.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pictureBox3.TabIndex = 8
-        Me.pictureBox3.TabStop = False
         '
         'mnuOptions
         '
@@ -181,6 +160,26 @@ Partial Class frmLogin
         Me.progSignin.TabIndex = 15
         Me.progSignin.Visible = False
         '
+        'pictureBox4
+        '
+        Me.pictureBox4.Image = Global.CompLock.My.Resources.Resources.Password
+        Me.pictureBox4.Location = New System.Drawing.Point(342, 364)
+        Me.pictureBox4.Name = "pictureBox4"
+        Me.pictureBox4.Size = New System.Drawing.Size(39, 35)
+        Me.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pictureBox4.TabIndex = 9
+        Me.pictureBox4.TabStop = False
+        '
+        'pictureBox3
+        '
+        Me.pictureBox3.Image = Global.CompLock.My.Resources.Resources.User_48px
+        Me.pictureBox3.Location = New System.Drawing.Point(342, 290)
+        Me.pictureBox3.Name = "pictureBox3"
+        Me.pictureBox3.Size = New System.Drawing.Size(39, 35)
+        Me.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pictureBox3.TabIndex = 8
+        Me.pictureBox3.TabStop = False
+        '
         'frmLogin
         '
         Me.AcceptButton = Me.btnSignIn
@@ -211,10 +210,10 @@ Partial Class frmLogin
         Me.ShowInTaskbar = False
         Me.TopMost = True
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.pictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.mnuOptions.ResumeLayout(False)
         Me.mnuOptions.PerformLayout()
+        CType(Me.pictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
