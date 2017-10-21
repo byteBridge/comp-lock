@@ -40,9 +40,9 @@ Partial Class frmNotification
         Me.Panel6.AllowDrop = True
         Me.Panel6.BackColor = System.Drawing.Color.OrangeRed
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel6.Location = New System.Drawing.Point(432, 2)
+        Me.Panel6.Location = New System.Drawing.Point(479, 2)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(2, 77)
+        Me.Panel6.Size = New System.Drawing.Size(2, 153)
         Me.Panel6.TabIndex = 50
         '
         'Panel5
@@ -50,9 +50,9 @@ Partial Class frmNotification
         Me.Panel5.AllowDrop = True
         Me.Panel5.BackColor = System.Drawing.Color.OrangeRed
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel5.Location = New System.Drawing.Point(2, 79)
+        Me.Panel5.Location = New System.Drawing.Point(2, 155)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(432, 2)
+        Me.Panel5.Size = New System.Drawing.Size(479, 2)
         Me.Panel5.TabIndex = 49
         '
         'Panel4
@@ -62,7 +62,7 @@ Partial Class frmNotification
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel4.Location = New System.Drawing.Point(0, 2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(2, 79)
+        Me.Panel4.Size = New System.Drawing.Size(2, 155)
         Me.Panel4.TabIndex = 47
         '
         'Panel3
@@ -72,27 +72,26 @@ Partial Class frmNotification
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(434, 2)
+        Me.Panel3.Size = New System.Drawing.Size(481, 2)
         Me.Panel3.TabIndex = 48
         '
         'lblHelloStudentName
         '
         Me.lblHelloStudentName.AutoSize = True
-        Me.lblHelloStudentName.Font = New System.Drawing.Font("Segoe UI Light", 12.0!)
+        Me.lblHelloStudentName.Font = New System.Drawing.Font("Segoe UI Light", 13.0!)
         Me.lblHelloStudentName.ForeColor = System.Drawing.Color.DarkCyan
-        Me.lblHelloStudentName.Location = New System.Drawing.Point(67, 24)
+        Me.lblHelloStudentName.Location = New System.Drawing.Point(12, 49)
         Me.lblHelloStudentName.Name = "lblHelloStudentName"
-        Me.lblHelloStudentName.Size = New System.Drawing.Size(368, 42)
+        Me.lblHelloStudentName.Size = New System.Drawing.Size(334, 50)
         Me.lblHelloStudentName.TabIndex = 51
-        Me.lblHelloStudentName.Text = "Can you wind up your work. It is 5 minutes left before " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "the system logs you out." &
-    ""
+        Me.lblHelloStudentName.Text = "Can you wind up your work. It is 5 minutes" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "left before the system logs you out."
         '
         'lblRemainingTime
         '
         Me.lblRemainingTime.AutoSize = True
         Me.lblRemainingTime.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.lblRemainingTime.ForeColor = System.Drawing.Color.OrangeRed
-        Me.lblRemainingTime.Location = New System.Drawing.Point(65, 3)
+        Me.lblRemainingTime.Location = New System.Drawing.Point(60, 11)
         Me.lblRemainingTime.Name = "lblRemainingTime"
         Me.lblRemainingTime.Size = New System.Drawing.Size(115, 25)
         Me.lblRemainingTime.TabIndex = 52
@@ -106,11 +105,11 @@ Partial Class frmNotification
         Me.btnClose.BackColor = System.Drawing.Color.OrangeRed
         Me.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed
         Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClose.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!)
+        Me.btnClose.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!)
         Me.btnClose.ForeColor = System.Drawing.Color.White
-        Me.btnClose.Location = New System.Drawing.Point(249, 45)
+        Me.btnClose.Location = New System.Drawing.Point(259, 106)
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(149, 24)
+        Me.btnClose.Size = New System.Drawing.Size(210, 34)
         Me.btnClose.TabIndex = 53
         Me.btnClose.Text = "Thanks for reminding me"
         Me.btnClose.UseVisualStyleBackColor = False
@@ -130,7 +129,7 @@ Partial Class frmNotification
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(434, 81)
+        Me.ClientSize = New System.Drawing.Size(481, 157)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.lblHelloStudentName)
