@@ -27,8 +27,8 @@ Partial Class frmInputEmergencyPassword
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtEmergencyPassword = New System.Windows.Forms.TextBox()
-        Me.btnEnter = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnEnter = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -36,7 +36,7 @@ Partial Class frmInputEmergencyPassword
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 20.0!)
-        Me.Label1.ForeColor = System.Drawing.Color.DarkCyan
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(162, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(362, 37)
@@ -45,7 +45,7 @@ Partial Class frmInputEmergencyPassword
         '
         'Panel5
         '
-        Me.Panel5.BackColor = System.Drawing.Color.DarkCyan
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(162, Byte), Integer))
         Me.Panel5.Location = New System.Drawing.Point(1, 49)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(410, 1)
@@ -68,7 +68,7 @@ Partial Class frmInputEmergencyPassword
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!)
-        Me.Label2.ForeColor = System.Drawing.Color.DarkCyan
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(162, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(11, 21)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(151, 21)
@@ -83,20 +83,6 @@ Partial Class frmInputEmergencyPassword
         Me.txtEmergencyPassword.TabIndex = 0
         Me.txtEmergencyPassword.UseSystemPasswordChar = True
         '
-        'btnEnter
-        '
-        Me.btnEnter.BackColor = System.Drawing.Color.DarkCyan
-        Me.btnEnter.FlatAppearance.BorderSize = 0
-        Me.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEnter.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
-        Me.btnEnter.ForeColor = System.Drawing.Color.White
-        Me.btnEnter.Location = New System.Drawing.Point(15, 99)
-        Me.btnEnter.Name = "btnEnter"
-        Me.btnEnter.Size = New System.Drawing.Size(171, 28)
-        Me.btnEnter.TabIndex = 15
-        Me.btnEnter.Text = "Proceed"
-        Me.btnEnter.UseVisualStyleBackColor = False
-        '
         'btnCancel
         '
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -107,6 +93,20 @@ Partial Class frmInputEmergencyPassword
         Me.btnCancel.TabIndex = 19
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
+        '
+        'btnEnter
+        '
+        Me.btnEnter.BackColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(162, Byte), Integer))
+        Me.btnEnter.FlatAppearance.BorderSize = 0
+        Me.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEnter.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
+        Me.btnEnter.ForeColor = System.Drawing.Color.White
+        Me.btnEnter.Location = New System.Drawing.Point(15, 99)
+        Me.btnEnter.Name = "btnEnter"
+        Me.btnEnter.Size = New System.Drawing.Size(171, 28)
+        Me.btnEnter.TabIndex = 15
+        Me.btnEnter.Text = "Proceed"
+        Me.btnEnter.UseVisualStyleBackColor = False
         '
         'frmInputEmergencyPassword
         '
