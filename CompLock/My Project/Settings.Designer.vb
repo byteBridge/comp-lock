@@ -101,10 +101,10 @@ Namespace My
                 Me("EmergencyPassword") = value
             End Set
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(),
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
-         Global.System.Configuration.DefaultSettingValueAttribute("localhost")>
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("localhost")>  _
         Public Property Server() As String
             Get
                 Return CType(Me("Server"),String)
@@ -135,6 +135,18 @@ Namespace My
             End Get
             Set
                 Me("ApiServerPort") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("comp-lock-web-api-ui")>  _
+        Public Property DeveloperPassword() As String
+            Get
+                Return CType(Me("DeveloperPassword"),String)
+            End Get
+            Set
+                Me("DeveloperPassword") = value
             End Set
         End Property
     End Class

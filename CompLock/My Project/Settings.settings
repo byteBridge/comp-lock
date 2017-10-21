@@ -23,5 +23,8 @@
     <Setting Name="ApiServerPort" Type="System.String" Scope="User">
       <Value Profile="(Default)">3000</Value>
     </Setting>
+    <Setting Name="DeveloperPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">comp-lock-web-api-ui</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
