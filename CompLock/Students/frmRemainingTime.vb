@@ -93,7 +93,7 @@ Public Class frmRemainingTime
         ' NotifyIcon1.ShowBalloonTip(0)
         Dim Rect As New Rectangle
         Rect = Screen.GetWorkingArea(New Point(0, 0))
-        Me.Location = New Point(10, Rect.Height - 250)
+        Me.Location = New Point(25, Rect.Height - 300)
 
 
     End Sub

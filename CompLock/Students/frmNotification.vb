@@ -1,6 +1,6 @@
 ﻿Public Class frmNotification
-    Dim GoUp As Boolean
-    Dim GoRight As Boolean
+    Dim GoUp As Boolean = True
+    Dim GoRight As Boolean = True
     Dim TimerLife = 0
 
     Private Sub frmNotification_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -8,29 +8,28 @@
 
     End Sub
 
+    Dim evenOrOdd As Integer = 0
+    Dim counter As Integer = 0
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         TimerLife += 1
         If TimerLife = 100 Then
             Timer1.Stop()
             Close()
         End If
-        If Me.Height <= 120 Then
-            If Height = 115 Then
-                GoUp = True
+
+        counter += 1
+        If counter = 10 Then
+            If evenOrOdd Mod 2 = 0 Then
+                GoRight = Not GoRight
+                GoUp = Not GoUp
+            Else
+                GoRight = Not GoRight
+                GoUp = Not GoUp
             End If
-            If Height >= 120 Then
-                GoUp = False
-            End If
+            counter = 0
+            evenOrOdd += 1
         End If
 
-        If Me.Width <= 435 Then
-            If Width = 430 Then
-                GoRight = True
-            End If
-            If Width = 435 Then
-                GoRight = False
-            End If
-        End If
 
         If GoUp Then
             Height += 1

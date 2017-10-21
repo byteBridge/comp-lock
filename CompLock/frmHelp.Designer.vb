@@ -32,6 +32,8 @@ Partial Class frmHelp
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.lnkEmailAddress = New System.Windows.Forms.LinkLabel()
+        Me.lnkGithubRepo = New System.Windows.Forms.LinkLabel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -39,8 +41,6 @@ Partial Class frmHelp
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btnAbout = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
-        Me.lnkGithubRepo = New System.Windows.Forms.LinkLabel()
-        Me.lnkEmailAddress = New System.Windows.Forms.LinkLabel()
         Me.tabInfo.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -50,7 +50,7 @@ Partial Class frmHelp
         'Panel6
         '
         Me.Panel6.AllowDrop = True
-        Me.Panel6.BackColor = System.Drawing.Color.DarkCyan
+        Me.Panel6.BackColor = System.Drawing.Color.DarkViolet
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel6.Location = New System.Drawing.Point(326, 2)
         Me.Panel6.Name = "Panel6"
@@ -60,7 +60,7 @@ Partial Class frmHelp
         'Panel5
         '
         Me.Panel5.AllowDrop = True
-        Me.Panel5.BackColor = System.Drawing.Color.DarkCyan
+        Me.Panel5.BackColor = System.Drawing.Color.DarkViolet
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel5.Location = New System.Drawing.Point(0, 357)
         Me.Panel5.Name = "Panel5"
@@ -70,7 +70,7 @@ Partial Class frmHelp
         'Panel3
         '
         Me.Panel3.AllowDrop = True
-        Me.Panel3.BackColor = System.Drawing.Color.DarkCyan
+        Me.Panel3.BackColor = System.Drawing.Color.DarkViolet
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
@@ -80,7 +80,7 @@ Partial Class frmHelp
         'Panel1
         '
         Me.Panel1.AllowDrop = True
-        Me.Panel1.BackColor = System.Drawing.Color.DarkCyan
+        Me.Panel1.BackColor = System.Drawing.Color.DarkViolet
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 2)
         Me.Panel1.Name = "Panel1"
@@ -124,7 +124,7 @@ Partial Class frmHelp
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label1.ForeColor = System.Drawing.Color.DarkCyan
+        Me.Label1.ForeColor = System.Drawing.Color.DarkViolet
         Me.Label1.Location = New System.Drawing.Point(14, 14)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(114, 21)
@@ -144,6 +144,28 @@ Partial Class frmHelp
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'lnkEmailAddress
+        '
+        Me.lnkEmailAddress.AutoSize = True
+        Me.lnkEmailAddress.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.lnkEmailAddress.Location = New System.Drawing.Point(12, 247)
+        Me.lnkEmailAddress.Name = "lnkEmailAddress"
+        Me.lnkEmailAddress.Size = New System.Drawing.Size(174, 20)
+        Me.lnkEmailAddress.TabIndex = 4
+        Me.lnkEmailAddress.TabStop = True
+        Me.lnkEmailAddress.Text = "kgparadzayi@gmail.com"
+        '
+        'lnkGithubRepo
+        '
+        Me.lnkGithubRepo.AutoSize = True
+        Me.lnkGithubRepo.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.lnkGithubRepo.Location = New System.Drawing.Point(12, 86)
+        Me.lnkGithubRepo.Name = "lnkGithubRepo"
+        Me.lnkGithubRepo.Size = New System.Drawing.Size(282, 20)
+        Me.lnkGithubRepo.TabIndex = 3
+        Me.lnkGithubRepo.TabStop = True
+        Me.lnkGithubRepo.Text = "https://github.com/bytebridge/complock"
         '
         'Label4
         '
@@ -181,7 +203,7 @@ Partial Class frmHelp
         '
         Me.btnViewHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnViewHelp.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
-        Me.btnViewHelp.ForeColor = System.Drawing.Color.DarkCyan
+        Me.btnViewHelp.ForeColor = System.Drawing.Color.DarkViolet
         Me.btnViewHelp.Location = New System.Drawing.Point(9, 1)
         Me.btnViewHelp.Name = "btnViewHelp"
         Me.btnViewHelp.Size = New System.Drawing.Size(82, 31)
@@ -192,7 +214,7 @@ Partial Class frmHelp
         'Panel4
         '
         Me.Panel4.AllowDrop = True
-        Me.Panel4.BackColor = System.Drawing.Color.DarkCyan
+        Me.Panel4.BackColor = System.Drawing.Color.DarkViolet
         Me.Panel4.Location = New System.Drawing.Point(9, 34)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(306, 1)
@@ -202,7 +224,7 @@ Partial Class frmHelp
         '
         Me.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAbout.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
-        Me.btnAbout.ForeColor = System.Drawing.Color.DarkCyan
+        Me.btnAbout.ForeColor = System.Drawing.Color.DarkViolet
         Me.btnAbout.Location = New System.Drawing.Point(94, 1)
         Me.btnAbout.Name = "btnAbout"
         Me.btnAbout.Size = New System.Drawing.Size(82, 31)
@@ -227,28 +249,6 @@ Partial Class frmHelp
         Me.btnClose.Text = "Close"
         Me.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnClose.UseVisualStyleBackColor = False
-        '
-        'lnkGithubRepo
-        '
-        Me.lnkGithubRepo.AutoSize = True
-        Me.lnkGithubRepo.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.lnkGithubRepo.Location = New System.Drawing.Point(12, 86)
-        Me.lnkGithubRepo.Name = "lnkGithubRepo"
-        Me.lnkGithubRepo.Size = New System.Drawing.Size(282, 20)
-        Me.lnkGithubRepo.TabIndex = 3
-        Me.lnkGithubRepo.TabStop = True
-        Me.lnkGithubRepo.Text = "https://github.com/bytebridge/complock"
-        '
-        'lnkEmailAddress
-        '
-        Me.lnkEmailAddress.AutoSize = True
-        Me.lnkEmailAddress.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.lnkEmailAddress.Location = New System.Drawing.Point(12, 247)
-        Me.lnkEmailAddress.Name = "lnkEmailAddress"
-        Me.lnkEmailAddress.Size = New System.Drawing.Size(174, 20)
-        Me.lnkEmailAddress.TabIndex = 4
-        Me.lnkEmailAddress.TabStop = True
-        Me.lnkEmailAddress.Text = "kgparadzayi@gmail.com"
         '
         'frmHelp
         '
