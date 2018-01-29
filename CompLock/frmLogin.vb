@@ -72,12 +72,18 @@ Public Class frmLogin
                 Else
                     Dim r As Errors = JsonConvert.DeserializeObject(Of Errors)(json)
                     showProgress(False)
+                    MsgBox(r.reason)
                     MessageBox.Show(r.message, "Something's not right", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
 
             Catch ex As Exception
                 showProgress(False)
-                MessageBox.Show(ex.Message, "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show(ex.Message _
+                    & vbLf & vbLf &
+                    "The server is still booting up." _
+                    & vbLf & "Please wait for at least 2 minutes and try again." _
+                    & vbLf & "If the problem persists tell the administrator." _
+                    , "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
 
         End If
