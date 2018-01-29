@@ -224,7 +224,6 @@ Partial Class frmRemainingTime
         Me.btnViewHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnViewHelp.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.btnViewHelp.ForeColor = System.Drawing.Color.White
-        Me.btnViewHelp.Image = Global.CompLock.My.Resources.Resources.Help_teal
         Me.btnViewHelp.Location = New System.Drawing.Point(276, 8)
         Me.btnViewHelp.Name = "btnViewHelp"
         Me.btnViewHelp.Size = New System.Drawing.Size(57, 29)
