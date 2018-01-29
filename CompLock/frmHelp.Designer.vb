@@ -31,20 +31,20 @@ Partial Class frmHelp
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnViewHelp = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.btnAbout = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.lnkEmailAddress = New System.Windows.Forms.LinkLabel()
         Me.lnkGithubRepo = New System.Windows.Forms.LinkLabel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnViewHelp = New System.Windows.Forms.Button()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.btnAbout = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.tabInfo.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel6
@@ -131,64 +131,6 @@ Partial Class frmHelp
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Failed to login?"
         '
-        'TabPage2
-        '
-        Me.TabPage2.Controls.Add(Me.lnkEmailAddress)
-        Me.TabPage2.Controls.Add(Me.lnkGithubRepo)
-        Me.TabPage2.Controls.Add(Me.Label4)
-        Me.TabPage2.Controls.Add(Me.Label3)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(317, 354)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'lnkEmailAddress
-        '
-        Me.lnkEmailAddress.AutoSize = True
-        Me.lnkEmailAddress.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.lnkEmailAddress.Location = New System.Drawing.Point(12, 247)
-        Me.lnkEmailAddress.Name = "lnkEmailAddress"
-        Me.lnkEmailAddress.Size = New System.Drawing.Size(174, 20)
-        Me.lnkEmailAddress.TabIndex = 4
-        Me.lnkEmailAddress.TabStop = True
-        Me.lnkEmailAddress.Text = "kgparadzayi@gmail.com"
-        '
-        'lnkGithubRepo
-        '
-        Me.lnkGithubRepo.AutoSize = True
-        Me.lnkGithubRepo.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.lnkGithubRepo.Location = New System.Drawing.Point(12, 86)
-        Me.lnkGithubRepo.Name = "lnkGithubRepo"
-        Me.lnkGithubRepo.Size = New System.Drawing.Size(282, 20)
-        Me.lnkGithubRepo.TabIndex = 3
-        Me.lnkGithubRepo.TabStop = True
-        Me.lnkGithubRepo.Text = "https://github.com/bytebridge/complock"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.Label4.ForeColor = System.Drawing.Color.DimGray
-        Me.Label4.Location = New System.Drawing.Point(12, 47)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(257, 180)
-        Me.Label4.TabIndex = 2
-        Me.Label4.Text = resources.GetString("Label4.Text")
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label3.ForeColor = System.Drawing.Color.DarkCyan
-        Me.Label3.Location = New System.Drawing.Point(17, 17)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(52, 21)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "About"
-        '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.btnViewHelp)
@@ -232,6 +174,66 @@ Partial Class frmHelp
         Me.btnAbout.Text = "About"
         Me.btnAbout.UseVisualStyleBackColor = True
         '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.lnkEmailAddress)
+        Me.TabPage2.Controls.Add(Me.lnkGithubRepo)
+        Me.TabPage2.Controls.Add(Me.Label4)
+        Me.TabPage2.Controls.Add(Me.Label3)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(317, 354)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "TabPage2"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'lnkEmailAddress
+        '
+        Me.lnkEmailAddress.AutoSize = True
+        Me.lnkEmailAddress.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.lnkEmailAddress.Location = New System.Drawing.Point(12, 247)
+        Me.lnkEmailAddress.Name = "lnkEmailAddress"
+        Me.lnkEmailAddress.Size = New System.Drawing.Size(174, 20)
+        Me.lnkEmailAddress.TabIndex = 4
+        Me.lnkEmailAddress.TabStop = True
+        Me.lnkEmailAddress.Text = "kgparadzayi@gmail.com"
+        '
+        'lnkGithubRepo
+        '
+        Me.lnkGithubRepo.AutoSize = True
+        Me.lnkGithubRepo.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.lnkGithubRepo.Location = New System.Drawing.Point(12, 86)
+        Me.lnkGithubRepo.Name = "lnkGithubRepo"
+        Me.lnkGithubRepo.Size = New System.Drawing.Size(263, 20)
+        Me.lnkGithubRepo.TabIndex = 3
+        Me.lnkGithubRepo.TabStop = True
+        Me.lnkGithubRepo.Text = "https://bytebridge.github.io/complock"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.Label4.ForeColor = System.Drawing.Color.DimGray
+        Me.Label4.Location = New System.Drawing.Point(12, 47)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(254, 180)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "This software helps you manage your" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "fleet of computers with ease:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Designed " &
+    "and maintained by" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Kudakwashe Paradzayi." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Feel free to suggest new features or" &
+    " " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "report bugs by sending email to" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label3.ForeColor = System.Drawing.Color.DarkViolet
+        Me.Label3.Location = New System.Drawing.Point(17, 17)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(52, 21)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "About"
+        '
         'btnClose
         '
         Me.btnClose.BackColor = System.Drawing.Color.DarkOrange
@@ -258,10 +260,10 @@ Partial Class frmHelp
         Me.ClientSize = New System.Drawing.Size(328, 359)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.tabInfo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmHelp"
@@ -271,9 +273,9 @@ Partial Class frmHelp
         Me.tabInfo.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

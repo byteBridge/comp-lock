@@ -132,16 +132,4 @@
         a rare occurance but if you encounter
         it notify the administrator.</value>
   </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>This software is free and open source.
-You can view the source code at:
-
-
-Designed and maintained by
-Kudakwashe Paradzayi.
-
-Feel free to suggest new features or 
-report bugs by sending email to
-</value>
-  </data>
 </root>
