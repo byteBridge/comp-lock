@@ -72,7 +72,6 @@ Public Class frmLogin
                 Else
                     Dim r As Errors = JsonConvert.DeserializeObject(Of Errors)(json)
                     showProgress(False)
-                    MsgBox(r.reason)
                     MessageBox.Show(r.message, "Something's not right", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
 
