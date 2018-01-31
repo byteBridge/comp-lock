@@ -143,7 +143,7 @@ Public Class Student
 
         Dim http = New HttpClient()
         http.BaseAddress = New Uri(My.Settings.ApiServerURL & ":" & My.Settings.ApiServerPort)
-        Dim response = Await http.PostAsync("/auth/logout", formContent)
+        Dim response = Await http.PostAsync("api/v1/auth/logout", formContent)
     End Sub
 
     ''' <summary>
