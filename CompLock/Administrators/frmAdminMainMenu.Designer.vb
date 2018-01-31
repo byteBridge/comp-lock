@@ -28,6 +28,7 @@ Partial Class frmAdminMainMenu
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.btnCheckComputerRegistration = New System.Windows.Forms.Button()
         Me.btnOpenAdminConsole = New System.Windows.Forms.Button()
         Me.btnOpenSettings = New System.Windows.Forms.Button()
         Me.panel1.SuspendLayout()
@@ -41,7 +42,7 @@ Partial Class frmAdminMainMenu
         Me.panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.panel1.Location = New System.Drawing.Point(0, 0)
         Me.panel1.Name = "panel1"
-        Me.panel1.Size = New System.Drawing.Size(727, 100)
+        Me.panel1.Size = New System.Drawing.Size(829, 100)
         Me.panel1.TabIndex = 4
         '
         'lblName
@@ -59,7 +60,7 @@ Partial Class frmAdminMainMenu
         '
         Me.Panel3.BackColor = System.Drawing.Color.DarkViolet
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel3.Location = New System.Drawing.Point(725, 100)
+        Me.Panel3.Location = New System.Drawing.Point(827, 100)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(2, 201)
         Me.Panel3.TabIndex = 13
@@ -70,7 +71,7 @@ Partial Class frmAdminMainMenu
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel4.Location = New System.Drawing.Point(2, 301)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(725, 2)
+        Me.Panel4.Size = New System.Drawing.Size(827, 2)
         Me.Panel4.TabIndex = 14
         '
         'Panel5
@@ -82,6 +83,23 @@ Partial Class frmAdminMainMenu
         Me.Panel5.Size = New System.Drawing.Size(2, 203)
         Me.Panel5.TabIndex = 12
         '
+        'btnCheckComputerRegistration
+        '
+        Me.btnCheckComputerRegistration.BackColor = System.Drawing.Color.Transparent
+        Me.btnCheckComputerRegistration.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(162, Byte), Integer))
+        Me.btnCheckComputerRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCheckComputerRegistration.Font = New System.Drawing.Font("Segoe UI", 15.0!)
+        Me.btnCheckComputerRegistration.ForeColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(162, Byte), Integer))
+        Me.btnCheckComputerRegistration.Image = Global.CompLock.My.Resources.Resources.Computer_Desktop_teal_128
+        Me.btnCheckComputerRegistration.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnCheckComputerRegistration.Location = New System.Drawing.Point(437, 136)
+        Me.btnCheckComputerRegistration.Name = "btnCheckComputerRegistration"
+        Me.btnCheckComputerRegistration.Size = New System.Drawing.Size(353, 123)
+        Me.btnCheckComputerRegistration.TabIndex = 16
+        Me.btnCheckComputerRegistration.Text = "Check Computer Registration"
+        Me.btnCheckComputerRegistration.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnCheckComputerRegistration.UseVisualStyleBackColor = False
+        '
         'btnOpenAdminConsole
         '
         Me.btnOpenAdminConsole.BackColor = System.Drawing.Color.Transparent
@@ -91,7 +109,7 @@ Partial Class frmAdminMainMenu
         Me.btnOpenAdminConsole.ForeColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(162, Byte), Integer))
         Me.btnOpenAdminConsole.Image = Global.CompLock.My.Resources.Resources.OpenWebPage_128px
         Me.btnOpenAdminConsole.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnOpenAdminConsole.Location = New System.Drawing.Point(187, 136)
+        Me.btnOpenAdminConsole.Location = New System.Drawing.Point(43, 136)
         Me.btnOpenAdminConsole.Name = "btnOpenAdminConsole"
         Me.btnOpenAdminConsole.Size = New System.Drawing.Size(353, 123)
         Me.btnOpenAdminConsole.TabIndex = 15
@@ -108,7 +126,7 @@ Partial Class frmAdminMainMenu
         Me.btnOpenSettings.ForeColor = System.Drawing.Color.White
         Me.btnOpenSettings.Image = Global.CompLock.My.Resources.Resources.Settings_48px
         Me.btnOpenSettings.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnOpenSettings.Location = New System.Drawing.Point(510, 19)
+        Me.btnOpenSettings.Location = New System.Drawing.Point(585, 12)
         Me.btnOpenSettings.Name = "btnOpenSettings"
         Me.btnOpenSettings.Size = New System.Drawing.Size(205, 54)
         Me.btnOpenSettings.TabIndex = 16
@@ -120,7 +138,8 @@ Partial Class frmAdminMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(727, 303)
+        Me.ClientSize = New System.Drawing.Size(829, 303)
+        Me.Controls.Add(Me.btnCheckComputerRegistration)
         Me.Controls.Add(Me.btnOpenAdminConsole)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel4)
@@ -143,4 +162,5 @@ Partial Class frmAdminMainMenu
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents btnOpenAdminConsole As Button
     Friend WithEvents btnOpenSettings As Button
+    Friend WithEvents btnCheckComputerRegistration As Button
 End Class

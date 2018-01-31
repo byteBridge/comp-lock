@@ -112,6 +112,12 @@
     <Compile Include="Administrators\frmCreateAccount.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Administrators\frmRegisterComputer.Designer.vb">
+      <DependentUpon>frmRegisterComputer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrators\frmRegisterComputer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Administrators\FrmReports.Designer.vb">
       <DependentUpon>FrmReports.vb</DependentUpon>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrators\frmCreateAccount.resx">
       <DependentUpon>frmCreateAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrators\frmRegisterComputer.resx">
+      <DependentUpon>frmRegisterComputer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrators\FrmReports.resx">
       <DependentUpon>FrmReports.vb</DependentUpon>
@@ -396,6 +405,10 @@
     <None Include="Resources\OpenWebPage-128px.png" />
     <None Include="Resources\Settings-48px.png" />
     <None Include="Resources\unlock-32px.png" />
+    <None Include="Resources\Check.png" />
+    <None Include="Resources\Computer-Desktop_orange_48.png" />
+    <None Include="Resources\Chat - Cancel_orange_32.png" />
+    <None Include="Resources\Computer-Desktop_teal_128.png" />
     <Content Include="Webpage locked-WF.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

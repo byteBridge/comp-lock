@@ -43,6 +43,10 @@ Public Class frmLogin
                 Dim Student As New Student()
                 If response.StatusCode = 200 Then
                     Dim r As Success = JsonConvert.DeserializeObject(Of Success)(json)
+
+                    'save the token
+                    My.Settings.AccessToken = r.token
+ 
                     With r.user
                         Student.Blocked = .blocked
                         Student.FirstName = .f_name

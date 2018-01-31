@@ -21,4 +21,11 @@
         Property message
         Property reason
     End Class
+
+    Class Computer
+        Property name As String
+    End Class
+    Class SuccessComputer
+        Property computers As Computer()
+    End Class
 End Namespace
