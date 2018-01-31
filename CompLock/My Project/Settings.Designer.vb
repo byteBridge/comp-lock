@@ -149,6 +149,18 @@ Namespace My
                 Me("DeveloperPassword") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property AccessToken() As String
+            Get
+                Return CType(Me("AccessToken"),String)
+            End Get
+            Set
+                Me("AccessToken") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

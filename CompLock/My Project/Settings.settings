@@ -26,5 +26,8 @@
     <Setting Name="DeveloperPassword" Type="System.String" Scope="User">
       <Value Profile="(Default)">comp-lock-web-api-ui</Value>
     </Setting>
+    <Setting Name="AccessToken" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

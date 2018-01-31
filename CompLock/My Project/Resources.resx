@@ -181,14 +181,20 @@
   <data name="Reload-WF_teal_321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Reload-WF_teal_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Arrowhead down-teal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Arrowhead down-teal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Preview_teal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Preview_teal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Computer_teal_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Computer_teal_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Computer-Desktop_orange_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Computer-Desktop_orange_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="admin_color" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin_color.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chat - Cancel_orange_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chat - Cancel_orange_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="clock_teal_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clock_teal_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -198,6 +204,9 @@
   </data>
   <data name="signout_white_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\signout_white_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Help_white_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Help_white_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Adobe-PDF-Export_teal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Adobe-PDF-Export_teal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,20 +223,23 @@
   <data name="UpArrow-01-teal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UpArrow-01-teal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ViewAccounts_teal_128px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ViewAccounts_teal_128px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Check" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UserFind_bk-teal_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UserFind_bk-teal_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Help_white_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Help_white_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Computer_teal_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Computer_teal_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Help_teal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Help_teal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Help_teal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Help_teal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unlock-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unlock-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ShutDown_orangered_128px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ShutDown_orangered_128px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,8 +259,8 @@
   <data name="admin_color1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin_color.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Arrowhead down-teal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Arrowhead down-teal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ViewAccounts_teal_128px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ViewAccounts_teal_128px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ArrowHeadRight_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ArrowHeadRight_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,7 +277,7 @@
   <data name="ShutDown_orangered_128px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ShutDown_orangered_128px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="unlock-32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unlock-32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Computer-Desktop_teal_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Computer-Desktop_teal_128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

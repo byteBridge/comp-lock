@@ -62,4 +62,8 @@
     Private Sub btnOpenSettings_Click(sender As Object, e As EventArgs) Handles btnOpenSettings.Click
         frmSettings.Show()
     End Sub
+
+    Private Sub btnCheckComputerRegistration_Click(sender As Object, e As EventArgs) Handles btnCheckComputerRegistration.Click
+        frmRegisterComputer.Show()
+    End Sub
 End Class
