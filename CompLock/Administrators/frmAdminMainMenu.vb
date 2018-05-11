@@ -20,8 +20,7 @@
     End Sub
 
     Private Sub btnReports_Click(sender As Object, e As EventArgs)
-        FrmReports.NameOfAdministrator = NameOfAdministrator
-        FrmReports.ShowDialog()
+
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs)

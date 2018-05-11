@@ -1,7 +1,6 @@
 ﻿Imports Npgsql
 Imports System.IO
-Imports iTextSharp.text
-Imports iTextSharp.text.pdf
+
 Public Class Administrator
     Enum ReportType
         GeneralReport
@@ -212,100 +211,6 @@ Public Class Administrator
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
         Return AccountTypes
-    End Function
-
-    Sub PrintReport(dgvReport As DataGridView, ReportType As String, NameOfAdministrator As String, Save As Boolean)
-
-        'initialise variables
-        Dim doc As Document = New Document(iTextSharp.text.PageSize.A4, 5, 5, 42, 35)
-        Dim paragrapghFont As New iTextSharp.text.Font(iTextSharp.text.Font.GetFamilyIndex("Tahoma"), 9.0F, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK)
-        Dim header As Paragraph = New Paragraph("REPORT TYPE: " & ReportType & vbLf & "DATE: " & Date.Now.ToString("dddd dd MMMM yyyy") & vbLf & "Time: " & DateAndTime.TimeOfDay.ToString("HH:mm") & vbLf & "CREATED BY: " & NameOfAdministrator, paragrapghFont)
-        header.IndentationLeft = 60
-        Dim blank As Paragraph = New Paragraph("                      ")
-        Dim table As PdfPTable = New PdfPTable(dgvReport.Columns.Count)
-
-
-        'check if the user is saving or previewing the report
-        If Save = True Then
-
-            Dim dialog As SaveFileDialog = New SaveFileDialog()
-            dialog.Title = "Select the path to save your report"
-            dialog.Filter = "PDF files (*.pdf)|*.pdf"
-
-            If (dialog.ShowDialog() <> DialogResult.Cancel) Then
-                Dim Filename As String = dialog.FileName
-                Dim writer As PdfWriter = PdfWriter.GetInstance(doc, New FileStream(Filename, FileMode.Create))
-            End If
-        Else
-            Dim writer As PdfWriter = PdfWriter.GetInstance(doc, New FileStream(FileIO.SpecialDirectories.CurrentUserApplicationData + "\Temp.pdf", FileMode.Create)) ' //"Trace " + Resource + ".pdf", FileMode.Create)) 
-        End If
-
-
-        Try
-            doc.Open()
-
-            ' populate the title
-            For j As Integer = 0 To dgvReport.Columns.Count - 1
-                table.AddCell(New Phrase(dgvReport.Columns(j).HeaderText, New iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 12.0F, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK))) ' //increse the font 
-            Next
-            table.HeaderRows = 1
-
-            'add the rows containing member information from the dgv
-            For i As Integer = 0 To dgvReport.Rows.Count - 1
-
-                For k As Integer = 0 To dgvReport.Columns.Count - 1
-
-                    If (dgvReport(k, i).Value <> Nothing) Then
-
-                        table.AddCell(New Phrase(dgvReport(k, i).Value.ToString(), paragrapghFont))
-                    End If
-                Next
-            Next
-
-
-            'add all to the document
-            doc.Add(header)
-            doc.Add(blank)
-            doc.Add(table)
-            doc.Add(blank)
-            doc.Close()
-
-            'if user is previewing open the file.
-            If Not Save Then
-                Process.Start(FileIO.SpecialDirectories.CurrentUserApplicationData + "\Temp.pdf")
-            End If
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-
-    End Sub
-
-    Function CreateTodayReport() As Object
-        Dim Connections As DataConnections
-        Dim ds As DataSet
-        Dim dt As DataTable = Nothing
-        Try
-            ds = New DataSet()
-            dt = New DataTable()
-            Connections = New DataConnections()
-            Connections.Connection.Open()
-            Connections.SQLStatement = "SELECT username,start_time,duration,log_date,comp_name from logsession where log_date ='" & DateTime.Today.ToString("MM/dd/yyyy") & "' ORDER BY log_date DESC"
-            Connections.DataAdapter = New NpgsqlDataAdapter(Connections.SQLStatement, Connections.Connection)
-            Connections.DataAdapter.Fill(ds)
-            Connections.Connection.Close()
-
-            ds.Tables(0).Columns(0).ColumnName = "username".ToUpper()
-            ds.Tables(0).Columns(1).ColumnName = "Start time".ToUpper()
-            ds.Tables(0).Columns(2).ColumnName = "Duration".ToUpper()
-            ds.Tables(0).Columns(3).ColumnName = "Date".ToUpper()
-            ds.Tables(0).Columns(4).ColumnName = "computer name".ToUpper()
-            Return ds.Tables(0)
-
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-        End Try
-        Return Nothing
     End Function
 
 End Class

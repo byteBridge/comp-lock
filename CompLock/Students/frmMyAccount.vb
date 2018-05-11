@@ -64,7 +64,5 @@
     Private Sub btnPrintStudentLogin_Click(sender As Object, e As EventArgs) Handles btnPrintStudentLogin.Click
 
         Dim ReportTitle As String = "Login summary for " & _student.FullName()
-        _administrator.PrintReport(dgvLoginSummary, ReportTitle, NameOfAdministrator, False)
-
     End Sub
 End Class
