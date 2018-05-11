@@ -51,12 +51,9 @@
     <ApplicationIcon>Webpage locked-WF.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="itextsharp">
-      <HintPath>..\..\..\..\..\..\..\Kuda lenovo restore\Kudakwashe Lenovo Backup\KayOS\Librae\Backup\Current UI\Librae[Father]\Librae\itextsharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Npgsql, Version=3.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>..\packages\Npgsql.3.2.7\lib\net45\Npgsql.dll</HintPath>
@@ -121,12 +118,6 @@
       <DependentUpon>frmRegisterComputer.vb</DependentUpon>
     </Compile>
     <Compile Include="Administrators\frmRegisterComputer.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrators\FrmReports.Designer.vb">
-      <DependentUpon>FrmReports.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Administrators\FrmReports.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administrators\frmSettings.Designer.vb">
@@ -224,9 +215,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrators\frmRegisterComputer.resx">
       <DependentUpon>frmRegisterComputer.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrators\FrmReports.resx">
-      <DependentUpon>FrmReports.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrators\frmSettings.resx">
       <DependentUpon>frmSettings.vb</DependentUpon>
