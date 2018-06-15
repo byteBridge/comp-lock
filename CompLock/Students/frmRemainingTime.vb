@@ -95,31 +95,35 @@ Public Class frmRemainingTime
     End Sub
 
     Private Sub frmRemainingTime_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' NotifyIcon1.ShowBalloonTip(0)
-        Dim Rect As New Rectangle
-        Rect = Screen.GetWorkingArea(New Point(0, 0))
-        Me.Location = New Point(25, Rect.Height - 300)
+    ' NotifyIcon1.ShowBalloonTip(0)
+    Dim Rect As New Rectangle
+    Rect = Screen.GetWorkingArea(New Point(0, 0))
+    Me.Location = New Point(25, Rect.Height - 300)
 
-        ' connect to the socket
-        Try
-            Dim ApiUrlAndPort As String = My.Settings.ApiServerURL & ":" & My.Settings.ApiServerPort
-            Dim socket = IO.Socket(ApiUrlAndPort)
-      socket.On("take-screenshot", Sub(username)
-                                     If username = Me.Student.Username Then
-                                       Dim s As New ResponseOjects.Screenshot
-                                       s.imageUrl = Me.TakeScreenshot()
-                                       socket.Emit("took-screenshot", JsonConvert.SerializeObject(s))
-                                     End If
-                                   End Sub)
-      socket.On("logout", Sub(username)
-                            ' only logout if the current student is the target
-                            If username = Me.Student.Username Then
-                              Me.CloseRemotely()
-                              socket.Disconnect()
-                            End If
-                          End Sub)
+    ' connect to the socket
+    Try
+      Dim ApiUrlAndPort As String = My.Settings.ApiServerURL & ":" & My.Settings.ApiServerPort
+      Dim socket = IO.Socket(ApiUrlAndPort)
+
+      socket.On("take-screenshot",
+                Sub(username)
+                  If username = Me.Student.Username Then
+                    Dim s As New ResponseOjects.Screenshot
+                    s.imageUrl = Me.TakeScreenshot()
+                    socket.Emit("took-screenshot", JsonConvert.SerializeObject(s))
+                  End If
+                End Sub)
+
+      socket.On("logout",
+                Sub(username)
+                  ' only logout if the current student is the target
+                  If username = Me.Student.Username Then
+                    Me.CloseRemotely()
+                    socket.Disconnect()
+                  End If
+                End Sub)
     Catch ex As Exception
-            MessageBox.Show(ex.Message)
+      MessageBox.Show(ex.Message)
         End Try
     End Sub
 
