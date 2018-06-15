@@ -22,6 +22,10 @@
         Property reason
     End Class
 
+    Class Screenshot
+        Property imageUrl
+    End Class
+
     Class Computer
         Property name As String
     End Class

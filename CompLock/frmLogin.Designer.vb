@@ -29,13 +29,13 @@ Partial Class frmLogin
         Me.label3 = New System.Windows.Forms.Label()
         Me.label4 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.btnSignIn = New System.Windows.Forms.Button()
         Me.mnuOptions = New System.Windows.Forms.MenuStrip()
         Me.tlstrpEmergencyExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.tlstrpHelp = New System.Windows.Forms.ToolStripMenuItem()
         Me.progSignin = New System.Windows.Forms.ProgressBar()
         Me.pictureBox4 = New System.Windows.Forms.PictureBox()
         Me.pictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.btnSignIn = New System.Windows.Forms.Button()
         Me.mnuOptions.SuspendLayout()
         CType(Me.pictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -113,21 +113,6 @@ Partial Class frmLogin
         Me.Label8.TabIndex = 13
         Me.Label8.Text = " "
         '
-        'btnSignIn
-        '
-        Me.btnSignIn.BackColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(162, Byte), Integer))
-        Me.btnSignIn.FlatAppearance.BorderSize = 0
-        Me.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSignIn.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.btnSignIn.ForeColor = System.Drawing.Color.White
-        Me.btnSignIn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSignIn.Location = New System.Drawing.Point(349, 464)
-        Me.btnSignIn.Name = "btnSignIn"
-        Me.btnSignIn.Size = New System.Drawing.Size(297, 46)
-        Me.btnSignIn.TabIndex = 2
-        Me.btnSignIn.Text = "Sign in"
-        Me.btnSignIn.UseVisualStyleBackColor = False
-        '
         'mnuOptions
         '
         Me.mnuOptions.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tlstrpEmergencyExit, Me.tlstrpHelp})
@@ -180,6 +165,21 @@ Partial Class frmLogin
         Me.pictureBox3.TabIndex = 8
         Me.pictureBox3.TabStop = False
         '
+        'btnSignIn
+        '
+        Me.btnSignIn.BackColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(162, Byte), Integer))
+        Me.btnSignIn.FlatAppearance.BorderSize = 0
+        Me.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSignIn.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.btnSignIn.ForeColor = System.Drawing.Color.White
+        Me.btnSignIn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnSignIn.Location = New System.Drawing.Point(349, 464)
+        Me.btnSignIn.Name = "btnSignIn"
+        Me.btnSignIn.Size = New System.Drawing.Size(297, 46)
+        Me.btnSignIn.TabIndex = 2
+        Me.btnSignIn.Text = "Sign in"
+        Me.btnSignIn.UseVisualStyleBackColor = False
+        '
         'frmLogin
         '
         Me.AcceptButton = Me.btnSignIn
@@ -222,8 +222,6 @@ Partial Class frmLogin
     Private pictureBox3 As System.Windows.Forms.PictureBox
     Friend label4 As System.Windows.Forms.Label
     Friend label3 As System.Windows.Forms.Label
-
-    Friend WithEvents btnSignIn As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents txtPassword As TextBox
@@ -236,4 +234,5 @@ Partial Class frmLogin
     Friend WithEvents tlstrpEmergencyExit As ToolStripMenuItem
     Friend WithEvents tlstrpHelp As ToolStripMenuItem
     Friend WithEvents progSignin As ProgressBar
+    Friend WithEvents btnSignIn As Button
 End Class

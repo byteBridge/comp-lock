@@ -1,5 +1,9 @@
 ﻿Imports CompLock
+Imports Newtonsoft.Json
 Imports System.Net.Http
+Imports Quobject.SocketIoClientDotNet.Client
+Imports System.IO
+
 Public Class frmRemainingTime
     Private Student As Student
     Private AllowWindowToClose As Boolean = False
@@ -41,6 +45,7 @@ Public Class frmRemainingTime
         lblComputerName.Text = Environment.UserName
         'Start the timer so that count down begins
         tmrStudentSession.Start()
+
     End Sub
 
     Private Sub btnSignOut_Click(sender As Object, e As EventArgs) Handles btnSignOut.Click
@@ -95,9 +100,46 @@ Public Class frmRemainingTime
         Rect = Screen.GetWorkingArea(New Point(0, 0))
         Me.Location = New Point(25, Rect.Height - 300)
 
-
+        ' connect to the socket
+        Try
+            Dim ApiUrlAndPort As String = My.Settings.ApiServerURL & ":" & My.Settings.ApiServerPort
+            Dim socket = IO.Socket(ApiUrlAndPort)
+      socket.On("take-screenshot", Sub(username)
+                                     If username = Me.Student.Username Then
+                                       Dim s As New ResponseOjects.Screenshot
+                                       s.imageUrl = Me.TakeScreenshot()
+                                       socket.Emit("took-screenshot", JsonConvert.SerializeObject(s))
+                                     End If
+                                   End Sub)
+      socket.On("logout", Sub(username)
+                            ' only logout if the current student is the target
+                            If username = Me.Student.Username Then
+                              Me.CloseRemotely()
+                              socket.Disconnect()
+                            End If
+                          End Sub)
+    Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
+    Public Delegate Sub CloseRemotelyCallback()
+    ''' <summary>
+    ''' Close the form to logout to user as commanded by the server
+    ''' </summary>
+    Private Sub CloseRemotely()
+
+        ' InvokeRequired required compares the thread ID of the
+        ' calling thread to the thread ID of the creating thread.
+        ' If these threads are different, it returns true.
+        If InvokeRequired Then
+            Invoke(New CloseRemotelyCallback(AddressOf CloseRemotely))
+        Else
+            AllowWindowToClose = True
+            frmLogin.Show()
+            Close()
+        End If
+    End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         NotifyIcon1.ShowBalloonTip(2000)
         NotifyIcon1.Visible = True
@@ -124,6 +166,41 @@ Public Class frmRemainingTime
 
         End Try
     End Sub
+
+    Private Function TakeScreenshot()
+        Try
+            Dim screenSize As Size = New Size(My.Computer.Screen.Bounds.Width, My.Computer.Screen.Bounds.Height)
+
+            Dim screenGrab As New Bitmap(My.Computer.Screen.Bounds.Width, My.Computer.Screen.Bounds.Height)
+
+            Dim g As Graphics = Graphics.FromImage(screenGrab)
+
+            g.CopyFromScreen(New Point(0, 0), New Point(0, 0), screenSize)
+            'PictureBox4.Image = screenGrab
+            Dim sd As Bitmap
+            'Taking the screenshot of desktop here
+
+
+            'Converting the image to a byte[] to later be converted to base64 string
+            Dim imgStream As MemoryStream = New MemoryStream()
+            screenGrab.Save(imgStream, System.Drawing.Imaging.ImageFormat.Png)
+
+            imgStream.Close()
+            Dim byteArray As Byte() = imgStream.ToArray()
+            imgStream.Dispose()
+
+            'Convert the byte[] to base64 string for use with WebRequest to upload.
+            Dim final As String
+            final = Convert.ToBase64String(byteArray)
+
+            'Display the string to know that it's working.
+            'MsgBox(final)
+            Return final
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Function
 
     ''' <summary>
     ''' WRITTEN BY: Kudakwashe Paradzayi
