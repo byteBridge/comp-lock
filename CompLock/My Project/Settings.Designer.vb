@@ -116,7 +116,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://kudakwashe")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost")>  _
         Public Property ApiServerURL() As String
             Get
                 Return CType(Me("ApiServerURL"),String)
